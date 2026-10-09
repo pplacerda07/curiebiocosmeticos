@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos | Curie Biocosméticos</title>
+    <meta
+      name="description"
+      content="Catálogo completo da Curie: shampoos e condicionadores sólidos, séruns faciais, hidratantes e sabonetes com ativos do Cerrado e do Pantanal."
+    />
+    <!-- a foto do topo comeca a baixar antes do CSS -->
+    <link rel="preload" as="image" href="./images/cerrado-fruits-bg.png" fetchpriority="high" />
+    <link rel="icon" href="./icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- nav start -->
+    <nav class="nav" id="nav">
+      <div class="nav__container row">
+        <a href="#" class="btn shop-btn row nav-btn" id="cart__btn">
+          <div class="img-box center-item transition">
+            <img src="./icons/shopping-cart.svg" alt="Carrinho" />
+            <span class="cart-count" id="cart__count">0</span>
+          </div>
+          <div class="hover-btn transition">CARRINHO</div>
+        </a>
+        <a href="./index.html" class="logo-btn nav-btn" id="logo__btn">
+          <img src="./icons/logo.svg" alt="Curie Biocosméticos" class="logo-dark" />
+          <img src="./icons/logo-claro.svg" alt="" class="logo-light" aria-hidden="true" />
+        </a>
+        <a class="hamb__btn hover-btn nav-btn" id="hamb__btn">MENU</a>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- hamb menu start -->
+    <div class="hamb__menu center-item" id="hamb__menu">
+      <a class="btn hover-btn close-btn" id="close-btn">FECHAR</a>
+      <div class="hamb-links start-item">
+        <p class="paragraph">MENU</p>
+        <a href="./index.html" class="btn hover-btn hamb-btn">Home</a>
+        <a href="./sobre.html" class="btn hover-btn hamb-btn">História</a>
+        <a href="./produtos.html" class="btn hover-btn hamb-btn">Produtos</a>
+        <a href="./sustentabilidade.html" class="btn hover-btn hamb-btn"
+          >Sustentabilidade</a
+        >
+      </div>
+      <div class="hamb-links-two start-item">
+        <p class="paragraph">CATEGORIAS</p>
+        <a href="./produtos.html?cat=shampoo" class="btn hover-btn hamb-btn-two"
+          >SHAMPOO</a
+        >
+        <a
+          href="./produtos.html?cat=condicionador"
+          class="btn hover-btn hamb-btn-two"
+          >CONDICIONADOR</a
+        >
+        <a href="./produtos.html?cat=seruns" class="btn hover-btn hamb-btn-two"
+          >SÉRUNS</a
+        >
+      </div>
+      <p class="paragraph dev-p">
+        Siga:
+        <span
+          ><a
+            href="https://www.instagram.com/curie.biocosmeticos/"
+            target="_blank"
+            rel="noopener"
+            class="btn hover-btn"
+            >@curie.biocosmeticos</a
+          ></span
+        >
+      </p>
+    </div>
+    <!-- hamb menu end -->
+
+    <div class="wrapper" id="wrapper">
+      <div class="scroll__container" id="scroll__container">
+        <!-- hero start -->
+        <div class="page-hero section center-item" id="topo" data-scroll-section>
+          <div class="bg-container full-size">
+            <div
+              class="parallax-container full-size"
+              data-scroll
+              data-scroll-speed="-4"
+              style="background: url(./images/cerrado-fruits-bg.png) no-repeat"
+            ></div>
+          </div>
+          <div class="page-hero__content">
+            <p class="paragraph p-one">NOSSOS PRODUTOS</p>
+            <h1 class="title-2">Catálogo</h1>
+            <p class="paragraph">
+              Cosméticos naturais desenvolvidos com ingredientes do Cerrado e do
+              Pantanal brasileiro. Fórmulas veganas, biodegradáveis e de baixo
+              consumo hídrico.
+            </p>
+          </div>
+        </div>
+        <!-- hero end -->
+
+        <!-- catálogo start -->
+        <div class="catalog section" id="catalogo" data-scroll-section>
+          <div class="container full-size">
+            <div class="catalog__filters row">
+              <a data-filter="Todos" class="active">Todos</a>
+              <a data-filter="Shampoo">Shampoo</a>
+              <a data-filter="Condicionador">Condicionador</a>
+              <a data-filter="Séruns">Séruns</a>
+              <a data-filter="Outros">Outros</a>
+            </div>
+            <div class="products-grid" id="catalog__grid"></div>
+            <p class="paragraph p-one" style="text-align: center">
+              CLIQUE NO PRODUTO PARA VER ATIVOS E MODO DE USO
+            </p>
+          </div>
+        </div>
+        <!-- catálogo end -->
+
+        <!-- selos start -->
+        <div class="seals section" id="selos" data-scroll-section>
+          <div class="container full-size">
+            <p class="paragraph p-one">COMPROMISSO EM CADA FÓRMULA</p>
+            <h1 class="title-2 lines-title">Como fazemos</h1>
+            <div class="seals__grid row">
+              <img loading="lazy" decoding="async" src="./images/seal-vegan.png" alt="Vegano" />
+              <img loading="lazy" decoding="async" src="./images/seal-cruelty-free.png" alt="Cruelty free" />
+              <img loading="lazy" decoding="async" src="./images/seal-plant.png" alt="Ingredientes naturais" />
+              <img loading="lazy" decoding="async" src="./images/seal-turtle.png" alt="Não testado em animais" />
+            </div>
+          </div>
+        </div>
+        <!-- selos end -->
+
+        <!-- cta start -->
+        <div class="cta section center-item" id="cta" data-scroll-section>
+          <div class="container center-item">
+            <h2>Transforme sua rotina em um ritual de consciência</h2>
+            <p class="paragraph">
+              Monte seu carrinho e finalize o pedido pelo WhatsApp. Atendemos
+              todo o Brasil.
+            </p>
+            <a
+              href="https://wa.me/5516982139630"
+              target="_blank"
+              rel="noopener"
+              class="btn center-item"
+              data-name="WHATSAPP"
+              ><span>FALE CONOSCO</span></a
+            >
+          </div>
+        </div>
+        <!-- cta end -->
+
+        <!-- footer start -->
+        <footer
+          class="footer section full-size center-item"
+          id="footer"
+          data-scroll-section
+        >
+          <div class="mini-container full-size flex">
+            <div class="left-foot">
+              <p class="paragraph">BEM-VINDA AO NOSSO MUNDO</p>
+              <h1 class="title-2">CURIE</h1>
+              <div class="footer-links row">
+                <div class="left-links">
+                  <p class="paragraph p-one">MENU</p>
+                  <a href="./index.html" class="btn hover-btn">Home</a>
+                  <a href="./sobre.html" class="btn hover-btn">História</a>
+                  <a href="./produtos.html" class="btn hover-btn">Produtos</a>
+                  <a href="./sustentabilidade.html" class="btn hover-btn"
+                    >Sustentabilidade</a
+                  >
+                </div>
+                <div class="right-links">
+                  <p class="paragraph p-one">ATENDIMENTO</p>
+                  <a
+                    href="https://wa.me/5516982139630"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn hover-btn"
+                    >WhatsApp</a
+                  >
+                  <a
+                    href="./sustentabilidade.html#logistica"
+                    class="btn hover-btn"
+                    >Logística reversa</a
+                  >
+                  <a href="./sobre.html#parceiros" class="btn hover-btn"
+                    >Parceiros</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="right-foot">
+              <p class="paragraph">
+                Ciência, beleza e propósito. Biocosméticos desenvolvidos com
+                ativos do Cerrado e do Pantanal, em parceria com as comunidades
+                que cuidam desses territórios.
+              </p>
+              <div class="social-links row">
+                <a
+                  href="https://www.instagram.com/curie.biocosmeticos/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >Instagram</a
+                >
+                <a
+                  href="https://wa.me/5516982139630"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >WhatsApp</a
+                >
+              </div>
+              <p class="paragraph p-one">
+                CNPJ 56.616.169/0001-25 <br />
+                © Curie Biocosméticos 2026
+              </p>
+            </div>
+          </div>
+        </footer>
+        <!-- footer end -->
+      </div>
+    </div>
+
+    <script src="./vendor/gsap.min.js"></script>
+    <script src="./vendor/ScrollTrigger.min.js"></script>
+    <script src="./vendor/locomotive-scroll.min.js"></script>
+    <script src="./javascript/produtos-data.js"></script>
+    <script src="./javascript/loja.js"></script>
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidade | Escola Curie</title>
+    <link rel="icon" href="/icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/webcurso/css/app.css" />
+  </head>
+  <!-- PROTÓTIPO VISUAL: conversas de exemplo -->
+  <body class="app" data-tela="comunidade">
+    <main class="conteudo">
+      <div class="conteudo__cabeca">
+        <div>
+          <p class="rotulo">Turma 01 · 214 alunas</p>
+          <h1>Comunidade</h1>
+        </div>
+        <button class="btn btn-principal btn-pequeno">Abrir novo tópico</button>
+      </div>
+
+      <div class="comunidade">
+        <!-- ============ feed ============ -->
+        <div>
+          <div
+            style="display: flex; gap: 0.6rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center"
+          >
+            <span class="tag tag-marrom">Todos</span>
+            <span class="tag">Minhas fórmulas</span>
+            <span class="tag">Dúvidas técnicas</span>
+            <span class="tag">Regulatório</span>
+            <span class="tag">Fornecedores</span>
+            <span class="tag">Respondidas pela professora</span>
+            <span class="rotulo-fraco" style="margin-left: auto">ordenar: recentes</span>
+          </div>
+
+          <article class="topico">
+            <div class="topico__topo">
+              <div class="avatar avatar--marrom">DQ</div>
+              <div>
+                <strong style="font-size: 0.92rem">Dra. Daniely</strong>
+                <em class="rotulo-fraco" style="display: block">professora · fixado</em>
+              </div>
+              <span class="tag tag-limao" style="margin-left: auto">aviso</span>
+            </div>
+            <h4>Envie sua fórmula até segunda para a correção ao vivo</h4>
+            <p>
+              Na mentoria de terça vou corrigir 6 fórmulas ao vivo. Poste aqui
+              com a tabela de fases, o percentual de cada matéria-prima e o que
+              aconteceu no seu teste de estabilidade.
+            </p>
+            <div class="topico__rodape">
+              <span>▲ 47 úteis</span>
+              <span>28 respostas</span>
+              <span>há 3 horas</span>
+            </div>
+          </article>
+
+          <article class="topico">
+            <div class="topico__topo">
+              <div class="avatar">CM</div>
+              <div>
+                <strong style="font-size: 0.92rem">Carla Mendes</strong>
+                <em class="rotulo-fraco" style="display: block">Campo Grande, MS · módulo 03</em>
+              </div>
+              <span class="tag" style="margin-left: auto">dúvida técnica</span>
+            </div>
+            <h4>Minha emulsão separou depois de 3 dias. O que investigo primeiro?</h4>
+            <p>
+              Segui a ficha da aula 3.2, fases nos 72 °C, cisalhamento de 3
+              minutos. No terceiro dia apareceu uma camada fina de óleo no topo.
+              Usei bocaiúva 6% e acuri 10%.
+            </p>
+            <div class="topico__rodape">
+              <span>▲ 12 úteis</span>
+              <span>9 respostas</span>
+              <span class="tag tag-limao">respondida pela professora</span>
+              <span style="margin-left: auto">há 1 dia</span>
+            </div>
+          </article>
+
+          <article class="topico">
+            <div class="topico__topo">
+              <div class="avatar">RF</div>
+              <div>
+                <strong style="font-size: 0.92rem">Renata Freitas</strong>
+                <em class="rotulo-fraco" style="display: block">Cuiabá, MT · módulo 05</em>
+              </div>
+              <span class="tag" style="margin-left: auto">minhas fórmulas</span>
+            </div>
+            <h4>Primeiro shampoo sólido pronto! Feedback bem-vindo</h4>
+            <p>
+              Argila branca 22%, SCI 40%, manteiga de karité 8%, acuri 6%. A
+              barra ficou firme e a espuma cremosa. Ainda estou ajustando a
+              fragrância. Quem já testou capim-limão nessa base?
+            </p>
+            <div class="topico__rodape">
+              <span>▲ 34 úteis</span>
+              <span>17 respostas</span>
+              <span style="margin-left: auto">há 2 dias</span>
+            </div>
+          </article>
+
+          <article class="topico">
+            <div class="topico__topo">
+              <div class="avatar">LS</div>
+              <div>
+                <strong style="font-size: 0.92rem">Lúcia Santos</strong>
+                <em class="rotulo-fraco" style="display: block">Corumbá, MS · módulo 09</em>
+              </div>
+              <span class="tag" style="margin-left: auto">regulatório</span>
+            </div>
+            <h4>Posso escrever "regenerador" no rótulo de um produto grau 1?</h4>
+            <p>
+              Estou montando o dossiê e fiquei em dúvida sobre a alegação. O
+              produto é um óleo corporal com baru e pracaxi.
+            </p>
+            <div class="topico__rodape">
+              <span>▲ 21 úteis</span>
+              <span>6 respostas</span>
+              <span class="tag tag-limao">respondida pela professora</span>
+              <span style="margin-left: auto">há 4 dias</span>
+            </div>
+          </article>
+
+          <article class="topico">
+            <div class="topico__topo">
+              <div class="avatar">AP</div>
+              <div>
+                <strong style="font-size: 0.92rem">Ana Paula Silva</strong>
+                <em class="rotulo-fraco" style="display: block">São Paulo, SP · módulo 10</em>
+              </div>
+              <span class="tag" style="margin-left: auto">fornecedores</span>
+            </div>
+            <h4>Compra direta de comunidade extrativista: como começar?</h4>
+            <p>
+              Quero comprar acuri direto da comunidade em vez de distribuidor.
+              Alguém já fez isso? Como funciona a nota e a quantidade mínima?
+            </p>
+            <div class="topico__rodape">
+              <span>▲ 29 úteis</span>
+              <span>14 respostas</span>
+              <span style="margin-left: auto">há 5 dias</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- ============ lateral ============ -->
+        <aside>
+          <div class="painel-lateral" id="mentorias">
+            <h4>Próximas mentorias</h4>
+            <div class="mentoria">
+              <div class="mentoria__data"><strong>12</strong>mai</div>
+              <div class="mentoria__texto">
+                <strong>Correção de fórmulas ao vivo</strong>
+                <span>19h30 · 90 min</span>
+              </div>
+            </div>
+            <div class="mentoria">
+              <div class="mentoria__data"><strong>26</strong>mai</div>
+              <div class="mentoria__texto">
+                <strong>Convidada: rotulagem e ANVISA</strong>
+                <span>19h30 · 60 min</span>
+              </div>
+            </div>
+            <div class="mentoria">
+              <div class="mentoria__data"><strong>09</strong>jun</div>
+              <div class="mentoria__texto">
+                <strong>Precificação e cadeia justa</strong>
+                <span>19h30 · 90 min</span>
+              </div>
+            </div>
+            <a href="#" class="btn btn-limao btn-pequeno btn-largo" style="margin-top: 1rem">
+              Adicionar à agenda
+            </a>
+          </div>
+
+          <div class="painel-lateral">
+            <h4>Gravações anteriores</h4>
+            <div class="material" style="margin-bottom: 0.6rem; padding: 0.9rem 1rem">
+              <span class="material__tipo" style="width: 2.6rem; height: 2.6rem">MP4</span>
+              <div class="material__info">
+                <strong style="font-size: 0.88rem">Abertura da turma 01</strong>
+                <span>1h12</span>
+              </div>
+            </div>
+            <div class="material" style="margin-bottom: 0; padding: 0.9rem 1rem">
+              <span class="material__tipo" style="width: 2.6rem; height: 2.6rem">MP4</span>
+              <div class="material__info">
+                <strong style="font-size: 0.88rem">Tira-dúvidas de emulsões</strong>
+                <span>58 min</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="painel-lateral">
+            <h4>Alunas em destaque</h4>
+            <div class="ranking">
+              <span class="ranking__pos">1</span>
+              <div class="avatar" style="width: 2rem; height: 2rem; font-size: 0.6rem">RF</div>
+              <strong>Renata Freitas</strong>
+              <span>2.140</span>
+            </div>
+            <div class="ranking">
+              <span class="ranking__pos">2</span>
+              <div class="avatar" style="width: 2rem; height: 2rem; font-size: 0.6rem">CM</div>
+              <strong>Carla Mendes</strong>
+              <span>1.980</span>
+            </div>
+            <div class="ranking">
+              <span class="ranking__pos">3</span>
+              <div class="avatar" style="width: 2rem; height: 2rem; font-size: 0.6rem">AP</div>
+              <strong>Ana Paula Silva</strong>
+              <span>1.755</span>
+            </div>
+            <div class="ranking">
+              <span class="ranking__pos">7</span>
+              <div class="avatar avatar--marrom" style="width: 2rem; height: 2rem; font-size: 0.6rem">MR</div>
+              <strong>Você</strong>
+              <span>1.240</span>
+            </div>
+          </div>
+
+          <div class="painel-lateral">
+            <h4>Combinados da turma</h4>
+            <p style="font-size: 0.88rem">
+              Toda fórmula postada recebe resposta em até 48h. Respeite a
+              autoria das colegas: fórmula compartilhada aqui não vira produto
+              de outra marca.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <script src="/webcurso/js/app.js"></script>
+  </body>
+</html>

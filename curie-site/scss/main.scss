@@ -1,0 +1,19 @@
+@import "./_bass";
+@import "./_reset";
+
+@import "./abstracts/_utils";
+@import "./abstracts/_mixins";
+
+@import "./layouts/_layout";
+@import "./layouts/_navbar";
+@import "./layouts/_footer";
+
+@import "./components/_btns";
+@import "./components/_hamb";
+@import "./components/_locoscroll";
+@import "./components/_loja";
+
+@import "./pages/_home";
+@import "./pages/_curie";
+@import "./pages/_internas";
+@import "./pages/_responsivo";

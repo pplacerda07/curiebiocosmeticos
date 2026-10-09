@@ -1,0 +1,20 @@
+# dependências
+node_modules/
+
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+nul
+
+# editores
+.vscode/
+.idea/
+*.swp
+
+# logs
+*.log
+npm-debug.log*
+
+# configuração local do Claude Code
+.claude/settings.local.json

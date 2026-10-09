@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>História | Curie Biocosméticos</title>
+    <meta
+      name="description"
+      content="Onde ciência, biomas e pele se encontram: a história da Curie Biocosméticos, a pesquisa por trás das fórmulas e os reconhecimentos da startup."
+    />
+    <!-- a foto do topo comeca a baixar antes do CSS -->
+    <link rel="preload" as="image" href="./images/cerrado-biodiversity.jpg" fetchpriority="high" />
+    <link rel="icon" href="./icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- nav start -->
+    <nav class="nav" id="nav">
+      <div class="nav__container row">
+        <a href="#" class="btn shop-btn row nav-btn" id="cart__btn">
+          <div class="img-box center-item transition">
+            <img src="./icons/shopping-cart.svg" alt="Carrinho" />
+            <span class="cart-count" id="cart__count">0</span>
+          </div>
+          <div class="hover-btn transition">CARRINHO</div>
+        </a>
+        <a href="./index.html" class="logo-btn nav-btn" id="logo__btn">
+          <img src="./icons/logo.svg" alt="Curie Biocosméticos" class="logo-dark" />
+          <img src="./icons/logo-claro.svg" alt="" class="logo-light" aria-hidden="true" />
+        </a>
+        <a class="hamb__btn hover-btn nav-btn" id="hamb__btn">MENU</a>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- hamb menu start -->
+    <div class="hamb__menu center-item" id="hamb__menu">
+      <a class="btn hover-btn close-btn" id="close-btn">FECHAR</a>
+      <div class="hamb-links start-item">
+        <p class="paragraph">MENU</p>
+        <a href="./index.html" class="btn hover-btn hamb-btn">Home</a>
+        <a href="./sobre.html" class="btn hover-btn hamb-btn">História</a>
+        <a href="./produtos.html" class="btn hover-btn hamb-btn">Produtos</a>
+        <a href="./sustentabilidade.html" class="btn hover-btn hamb-btn"
+          >Sustentabilidade</a
+        >
+      </div>
+      <div class="hamb-links-two start-item">
+        <p class="paragraph">NESTA PÁGINA</p>
+        <a href="#cientista" class="btn hover-btn hamb-btn-two">A CIENTISTA</a>
+        <a href="#parceiros" class="btn hover-btn hamb-btn-two">PARCEIROS</a>
+        <a href="#reconhecimentos" class="btn hover-btn hamb-btn-two"
+          >RECONHECIMENTOS</a
+        >
+      </div>
+      <p class="paragraph dev-p">
+        Siga:
+        <span
+          ><a
+            href="https://www.instagram.com/curie.biocosmeticos/"
+            target="_blank"
+            rel="noopener"
+            class="btn hover-btn"
+            >@curie.biocosmeticos</a
+          ></span
+        >
+      </p>
+    </div>
+    <!-- hamb menu end -->
+
+    <div class="wrapper" id="wrapper">
+      <div class="scroll__container" id="scroll__container">
+        <!-- hero start -->
+        <div class="page-hero section center-item" id="topo" data-scroll-section>
+          <div class="bg-container full-size">
+            <div
+              class="parallax-container full-size"
+              data-scroll
+              data-scroll-speed="-4"
+              style="background: url(./images/cerrado-biodiversity.jpg) no-repeat"
+            ></div>
+          </div>
+          <div class="page-hero__content">
+            <p class="paragraph p-one">NOSSA HISTÓRIA</p>
+            <h1 class="title-2">História</h1>
+            <p class="paragraph">
+              Onde ciência, biomas e pele se encontram.
+            </p>
+          </div>
+        </div>
+        <!-- hero end -->
+
+        <!-- origem start -->
+        <div class="story section" id="origem" data-scroll-section>
+          <div class="container full-size">
+            <div class="story__grid flex">
+              <div class="story__text">
+                <p class="paragraph p-one">A ORIGEM</p>
+                <h2>Onde ciência, biomas e pele se encontram</h2>
+                <p class="paragraph">
+                  A Curie Biocosméticos nasce do encontro entre pesquisa
+                  científica de ponta e a força dos biomas brasileiros. A partir
+                  do Cerrado e do Pantanal, territórios com uma das maiores
+                  biodiversidades do planeta, a marca surge com um propósito
+                  claro: transformar frutos nativos em cosméticos naturais de
+                  alta performance, preservando as histórias, os saberes e as
+                  comunidades que habitam esses lugares.
+                </p>
+                <p class="paragraph">
+                  Com foco em ingredientes como acuri, bocaiúva, guavira e baru,
+                  a Curie enxerga esses frutos não apenas como matéria-prima,
+                  mas como concentrados de compostos bioativos capazes de
+                  regenerar, proteger e equilibrar a pele. Cada fórmula é
+                  desenvolvida para unir biotecnologia, respeito ao território e
+                  resultados concretos para quem usa, sempre com uma pergunta
+                  norteadora: como gerar impacto positivo na pele, nas pessoas e
+                  no bioma ao mesmo tempo?
+                </p>
+              </div>
+              <div class="story__pic">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/cerrado-biodiversity.jpg"
+                    alt="Biodiversidade do Cerrado em floração"
+                  />
+                </div>
+                <p class="credit">© LUIZ FELIPE MENDES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- origem end -->
+
+        <!-- cientista start -->
+        <div class="story section alt" id="cientista" data-scroll-section>
+          <div class="container full-size">
+            <div class="story__grid flex">
+              <div class="story__pic">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/lab-researcher.jpg"
+                    alt="Dra. Daniely F. de Queiroz no laboratório"
+                  />
+                </div>
+              </div>
+              <div class="story__text">
+                <p class="paragraph p-one">PESQUISA E DESENVOLVIMENTO</p>
+                <h2>A cientista por trás das fórmulas</h2>
+                <p class="paragraph">
+                  A Curie Biocosméticos é liderada pela química Dra. Daniely F.
+                  de Queiroz, pesquisadora com mais de 10 anos de experiência em
+                  Pesquisa &amp; Desenvolvimento. Formada em Química Tecnológica
+                  pela UFMS, possui Mestrado em Química (Físico-Química) e
+                  Doutorado pelo Instituto de Química de São Carlos, USP, além
+                  de pós-doutoramento (CAPES/PNPD) em biotecnologia e
+                  desenvolvimento de novos materiais.
+                </p>
+                <p class="paragraph">
+                  Sua trajetória sempre esteve conectada ao uso inteligente da
+                  biodiversidade brasileira. Hoje, ela atua integrando
+                  biotecnologia e nanotecnologia ao desenvolvimento de
+                  cosméticos naturais, especialmente com ativos dos biomas
+                  Cerrado e Pantanal. Cada produto Curie carrega esse rigor:
+                  fórmulas testadas, pensadas em detalhe e desenvolvidas para
+                  entregar eficácia real, com responsabilidade social e
+                  ambiental.
+                </p>
+                <blockquote>
+                  “Comprometo-me a transformar ciência em impacto positivo,
+                  desenvolvendo cosméticos naturais de alta qualidade que
+                  promovem bem-estar, valorizam a biodiversidade do Cerrado e
+                  Pantanal e reafirmam o compromisso da Curie Biocosméticos com
+                  a responsabilidade social e ambiental.”
+                  <br />
+                  <span class="paragraph p-one">DRA. DANIELY F. DE QUEIROZ</span>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- cientista end -->
+
+        <!-- parceiros start -->
+        <div class="partners section" id="parceiros" data-scroll-section>
+          <div class="container full-size">
+            <p class="paragraph p-one">QUEM CAMINHA COM A GENTE</p>
+            <h1 class="title-2 lines-title">Parceiros</h1>
+            <div class="partners__logos row">
+              <img loading="lazy" decoding="async"
+                src="./images/partners-logos.png"
+                alt="Parceiros: UFMS, Fundect, UCDB, SEBRAE e SEMADESC GOVMS"
+              />
+              <img loading="lazy" decoding="async"
+                src="./images/logo-finep.png"
+                alt="Finep - Inovação e Pesquisa"
+                class="small"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- parceiros end -->
+
+        <!-- galeria start -->
+        <div class="gallery section" id="galeria" data-scroll-section>
+          <div class="container full-size">
+            <p class="paragraph p-one">QUEM FAZ ACONTECER</p>
+            <h1 class="title-2 lines-title">O time e os bastidores</h1>
+            <p class="paragraph">
+              Bancada, campo, sala de aula e palco. Um registro de quem
+              est&aacute; por tr&aacute;s de cada f&oacute;rmula da Curie.
+            </p>
+            <div class="gallery__grid">
+              <figure class="gallery__item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/time-daniely-bancada.jpg"
+                    alt="Pesquisadora da Curie trabalhando na bancada do laborat&oacute;rio"
+                  />
+                </div>
+                <figcaption>Na bancada, onde tudo come&ccedil;a</figcaption>
+              </figure>
+              <figure class="gallery__item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/time-equipe-laboratorio.jpg"
+                    alt="Equipe da Curie de jaleco no laborat&oacute;rio"
+                  />
+                </div>
+                <figcaption>A equipe que assina as f&oacute;rmulas</figcaption>
+              </figure>
+              <figure class="gallery__item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/laboratorio-bancada.jpg"
+                    alt="Vidraria e amostras na bancada do laborat&oacute;rio da Curie"
+                  />
+                </div>
+                <figcaption>No laborat&oacute;rio, do ensaio ao lote</figcaption>
+              </figure>
+              <figure class="gallery__item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/imprensa-lado-b.jpg"
+                    alt="Reportagem de televis&atilde;o sobre cosm&eacute;ticos feitos com frutos do Cerrado"
+                  />
+                </div>
+                <figcaption>A pesquisa virou mat&eacute;ria de TV</figcaption>
+              </figure>
+              <figure class="gallery__item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/evento-inova-biomas.jpg"
+                    alt="Estande da Curie no Inova Biomas, do Sebrae"
+                  />
+                </div>
+                <figcaption>Inova Biomas, Sebrae</figcaption>
+              </figure>
+              <figure class="gallery__item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/premio-mocao-congratulacao.jpg"
+                    alt="Mo&ccedil;&atilde;o de congratula&ccedil;&atilde;o recebida pela Curie"
+                  />
+                </div>
+                <figcaption>Mo&ccedil;&atilde;o de congratula&ccedil;&atilde;o</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <!-- galeria end -->
+
+        <!-- reconhecimentos start -->
+        <div class="timeline section" id="reconhecimentos" data-scroll-section>
+          <div class="container full-size center-item">
+            <p class="paragraph p-one">TRAJETÓRIA</p>
+            <h1 class="title-2 lines-title">De ideia à startup reconhecida</h1>
+            <p class="paragraph" style="max-width: 48rem; text-align: center">
+              A Curie Biocosméticos é resultado de anos de pesquisa e de um
+              movimento contínuo de transformação de conhecimento em soluções
+              concretas para o mercado. Esse percurso vem sendo reconhecido em
+              editais, programas de inovação e iniciativas que impulsionam
+              negócios de base científica no Brasil.
+            </p>
+            <div class="timeline__grid">
+              <div class="timeline__item">
+                <div class="row">
+                  <span class="year">2024</span>
+                  <span class="badge">Primeiro lugar</span>
+                </div>
+                <h3>Pitch IDEATHON, Inova Cerrado</h3>
+                <p class="paragraph">
+                  Reconhecimento do potencial inovador da Curie e da relevância
+                  do uso de frutos do Cerrado e Pantanal em biocosméticos.
+                </p>
+              </div>
+              <div class="timeline__item">
+                <div class="row">
+                  <span class="year">2024</span>
+                  <span class="badge">Terceiro lugar</span>
+                </div>
+                <h3>Startup Inovadora, Edital Inova Ideação</h3>
+                <p class="paragraph">
+                  Consolidação da Curie como startup em fase de ideação com base
+                  científica e foco em impacto socioambiental.
+                </p>
+              </div>
+              <div class="timeline__item">
+                <div class="row">
+                  <span class="year">2025</span>
+                  <span class="badge">Tração</span>
+                </div>
+                <h3>Entrada no Edital Inova Cerrado, etapa Tração</h3>
+                <p class="paragraph">
+                  Avanço para a etapa de tração, com fortalecimento do modelo de
+                  negócio e expansão da atuação da marca.
+                </p>
+              </div>
+              <div class="timeline__item">
+                <div class="row">
+                  <span class="year">2025</span>
+                  <span class="badge">Top 1.000</span>
+                </div>
+                <h3>Prêmio Sebrae Startups</h3>
+                <p class="paragraph">
+                  Premiação com participação no Startup Summit 2025, em
+                  Florianópolis, conectando a Curie ao ecossistema nacional de
+                  inovação.
+                </p>
+              </div>
+              <div class="timeline__item">
+                <div class="row">
+                  <span class="year">2025</span>
+                  <span class="badge">Aceleração</span>
+                </div>
+                <h3>Primeira Etapa FINEP (Ideação), Mulheres Inovadoras 2025</h3>
+                <p class="paragraph">
+                  Seleção em programa voltado a mulheres à frente de negócios de
+                  base tecnológica, reforçando o protagonismo feminino na
+                  ciência e no empreendedorismo.
+                </p>
+              </div>
+              <div class="timeline__item">
+                <div class="row">
+                  <span class="year">HOJE</span>
+                  <span class="badge">Bioeconomia</span>
+                </div>
+                <h3>Ciência que vira produto</h3>
+                <p class="paragraph">
+                  Do laboratório à prateleira: fórmulas veganas, sem plástico e
+                  de baixo consumo hídrico, feitas com ativos do Cerrado e do
+                  Pantanal.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- reconhecimentos end -->
+
+        <!-- cta start -->
+        <div class="cta section center-item" id="cta" data-scroll-section>
+          <div class="container center-item">
+            <h2>Faça parte da nossa jornada</h2>
+            <p class="paragraph">
+              Descubra produtos que combinam ciência, sustentabilidade e a
+              riqueza da biodiversidade brasileira.
+            </p>
+            <a
+              href="./produtos.html"
+              class="btn center-item"
+              data-name="CATÁLOGO"
+              ><span>VER PRODUTOS</span></a
+            >
+          </div>
+        </div>
+        <!-- cta end -->
+
+        <!-- footer start -->
+        <footer
+          class="footer section full-size center-item"
+          id="footer"
+          data-scroll-section
+        >
+          <div class="mini-container full-size flex">
+            <div class="left-foot">
+              <p class="paragraph">BEM-VINDA AO NOSSO MUNDO</p>
+              <h1 class="title-2">CURIE</h1>
+              <div class="footer-links row">
+                <div class="left-links">
+                  <p class="paragraph p-one">MENU</p>
+                  <a href="./index.html" class="btn hover-btn">Home</a>
+                  <a href="./sobre.html" class="btn hover-btn">História</a>
+                  <a href="./produtos.html" class="btn hover-btn">Produtos</a>
+                  <a href="./sustentabilidade.html" class="btn hover-btn"
+                    >Sustentabilidade</a
+                  >
+                </div>
+                <div class="right-links">
+                  <p class="paragraph p-one">ATENDIMENTO</p>
+                  <a
+                    href="https://wa.me/5516982139630"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn hover-btn"
+                    >WhatsApp</a
+                  >
+                  <a
+                    href="./sustentabilidade.html#logistica"
+                    class="btn hover-btn"
+                    >Logística reversa</a
+                  >
+                  <a href="./sobre.html#parceiros" class="btn hover-btn"
+                    >Parceiros</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="right-foot">
+              <p class="paragraph">
+                Ciência, beleza e propósito. Biocosméticos desenvolvidos com
+                ativos do Cerrado e do Pantanal, em parceria com as comunidades
+                que cuidam desses territórios.
+              </p>
+              <div class="social-links row">
+                <a
+                  href="https://www.instagram.com/curie.biocosmeticos/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >Instagram</a
+                >
+                <a
+                  href="https://wa.me/5516982139630"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >WhatsApp</a
+                >
+              </div>
+              <p class="paragraph p-one">
+                CNPJ 56.616.169/0001-25 <br />
+                © Curie Biocosméticos 2026
+              </p>
+            </div>
+          </div>
+        </footer>
+        <!-- footer end -->
+      </div>
+    </div>
+
+    <script src="./vendor/gsap.min.js"></script>
+    <script src="./vendor/ScrollTrigger.min.js"></script>
+    <script src="./vendor/locomotive-scroll.min.js"></script>
+    <script src="./javascript/produtos-data.js"></script>
+    <script src="./javascript/loja.js"></script>
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>

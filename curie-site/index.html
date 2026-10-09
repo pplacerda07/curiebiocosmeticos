@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curie Biocosméticos | Ciência, natureza e propósito</title>
+    <meta
+      name="description"
+      content="A Curie desenvolve biocosméticos naturais a partir da biodiversidade do Cerrado e do Pantanal, combinando pesquisa acadêmica, inovação sustentável e saberes tradicionais."
+    />
+    <!-- a foto do topo comeca a baixar antes do CSS -->
+    <link rel="preload" as="image" href="./images/hero-cerrado-aerial.jpg" fetchpriority="high" />
+    <link rel="icon" href="./icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- nav start -->
+    <nav class="nav" id="nav">
+      <div class="nav__container row">
+        <!-- shop btn start -->
+        <a href="#" class="btn shop-btn row nav-btn" id="cart__btn">
+          <div class="img-box center-item transition">
+            <img src="./icons/shopping-cart.svg" alt="Carrinho" />
+            <span class="cart-count" id="cart__count">0</span>
+          </div>
+          <div class="hover-btn transition">CARRINHO</div>
+        </a>
+        <!-- shop btn end -->
+        <a href="#banner" class="logo-btn nav-btn" id="logo__btn">
+          <img src="./icons/logo.svg" alt="Curie Biocosméticos" class="logo-dark" />
+          <img src="./icons/logo-claro.svg" alt="" class="logo-light" aria-hidden="true" />
+        </a>
+        <!-- hamb start -->
+        <a class="hamb__btn hover-btn nav-btn" id="hamb__btn">MENU</a>
+        <!-- hamb end -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- hamb menu start -->
+    <div class="hamb__menu center-item" id="hamb__menu">
+      <a class="btn hover-btn close-btn" id="close-btn">FECHAR</a>
+      <div class="hamb-links start-item">
+        <p class="paragraph">MENU</p>
+        <a href="./index.html" class="btn hover-btn hamb-btn">Home</a>
+        <a href="./sobre.html" class="btn hover-btn hamb-btn">História</a>
+        <a href="./produtos.html" class="btn hover-btn hamb-btn">Produtos</a>
+        <a href="./sustentabilidade.html" class="btn hover-btn hamb-btn"
+          >Sustentabilidade</a
+        >
+      </div>
+      <div class="hamb-links-two start-item">
+        <p class="paragraph">A MARCA</p>
+        <a href="./sobre.html" class="btn hover-btn hamb-btn-two"
+          >CIÊNCIA E PESQUISA</a
+        >
+        <a href="./sustentabilidade.html" class="btn hover-btn hamb-btn-two"
+          >COMUNIDADES PARCEIRAS</a
+        >
+        <a href="./sustentabilidade.html" class="btn hover-btn hamb-btn-two"
+          >LOGÍSTICA REVERSA</a
+        >
+      </div>
+      <p class="paragraph dev-p">
+        Siga:
+        <span
+          ><a
+            href="https://www.instagram.com/curie.biocosmeticos/"
+            target="_blank"
+            rel="noopener"
+            class="btn hover-btn"
+            >@curie.biocosmeticos</a
+          ></span
+        >
+      </p>
+    </div>
+    <!-- hamb menu end -->
+
+    <!-- wrapper start -->
+    <div class="wrapper" id="wrapper">
+      <!-- scroll container start -->
+      <div class="scroll__container" id="scroll__container">
+        <!-- banner start -->
+        <div
+          class="banner section center-item full-size"
+          id="banner"
+          data-scroll-section
+        >
+          <!-- bg container start -->
+          <div class="bg-container full-size">
+            <div
+              class="parallax-container full-size"
+              data-scroll
+              data-scroll-delay="1"
+              data-scroll-speed="-6"
+              style="background: url(./images/hero-cerrado-aerial.jpg) no-repeat"
+            ></div>
+          </div>
+          <!-- bg container end -->
+          <h1 class="title">CURIE</h1>
+          <p class="paragraph banner-tag">
+            BIOCOSMÉTICOS DO CERRADO E DO PANTANAL
+          </p>
+        </div>
+        <!-- banner end -->
+        <!-- about start -->
+        <div
+          class="about section full-size pad-section"
+          id="about"
+          data-scroll-section
+        >
+          <div class="container full-size center-item">
+            <div class="text-box">
+              <h6 class="sub-title">
+                SÃO <span>04</span> FRUTOS NATIVOS QUE SABEM :
+              </h6>
+            </div>
+            <div class="text-box">
+              <h1 class="title-2">Nutrir a pele</h1>
+            </div>
+            <div class="text-box">
+              <h1 class="title-2 flex">
+                Fortalecer
+                <div class="center-item">
+                  <img loading="lazy" decoding="async" src="./images/cerrado-fruits-tira.jpg" alt="Frutos do Cerrado" />
+                </div>
+                os fios
+              </h1>
+            </div>
+            <div class="text-box">
+              <h1 class="title-2 flex">
+                <div class="center-item">
+                  <img loading="lazy" decoding="async" src="./images/botanical-ingredients-tira.jpg" alt="Ativos botânicos" />
+                </div>
+                Regenerar a barreira
+              </h1>
+            </div>
+            <div class="text-box">
+              <h1 class="title-2 flex">
+                Proteger
+                <div class="center-item">
+                  <img loading="lazy" decoding="async" src="./images/cerrado-flowers-tira.jpg" alt="Flores do Cerrado" />
+                </div>
+                do tempo
+              </h1>
+            </div>
+            <div class="text-box">
+              <h1 class="title-2 flex">
+                Hidratar sem
+                <div class="center-item">
+                  <img loading="lazy" decoding="async" src="./images/pantanal-lake-tira.jpg" alt="Pantanal" />
+                </div>
+                gastar água
+              </h1>
+            </div>
+            <div class="text-box">
+              <h1 class="title-2 flex">Cuidar do bioma</h1>
+            </div>
+          </div>
+        </div>
+        <!-- about end -->
+        <!-- intro start -->
+        <div
+          class="intro section full-size center-item"
+          id="intro"
+          data-scroll-section
+        >
+          <div class="mini-container full-size flex">
+            <div class="intro-content full-size center-item">
+              <p class="paragraph p1">
+                Os ativos da Curie nascem de frutos nativos que concentram uma
+                das maiores potências biológicas do Brasil. O acuri e a bocaiúva
+                oferecem óleos ricos em ácidos graxos, carotenoides e
+                antioxidantes capazes de restaurar, nutrir e fortalecer a
+                barreira cutânea. A guavira, símbolo do Cerrado, fornece
+                vitamina C e flavonoides com ação revitalizante, enquanto o baru
+                aporta proteínas, minerais e compostos fenólicos de alta
+                atividade antioxidante.
+              </p>
+              <div class="text-box row">
+                <p class="paragraph">POR ISSO:</p>
+                <p class="paragraph">Cada fórmula nasce no laboratório.</p>
+              </div>
+              <div class="text-box row">
+                <p class="paragraph">SEMPRE:</p>
+                <p class="paragraph">Vegana, biodegradável e sem plástico.</p>
+              </div>
+              <div class="text-box row">
+                <p class="paragraph">PARA QUEM:</p>
+                <p class="paragraph">Quer cuidado com origem e propósito.</p>
+              </div>
+              <div
+                class="text-box parallax-box"
+                data-scroll
+                data-scroll-speed="1"
+                data-scroll-delay="0.5"
+              >
+                <h1 class="title-2">
+                  Nossa ciência, <br />
+                  sua pele
+                </h1>
+              </div>
+            </div>
+            <div class="intro-pic full-size center-item">
+              <div class="img-box">
+                <img loading="lazy" decoding="async"
+                  src="./images/lab-researcher.jpg"
+                  alt="Dra. Daniely F. de Queiroz no laboratório"
+                />
+              </div>
+              <div class="bg-container"></div>
+            </div>
+          </div>
+        </div>
+        <!-- intro end -->
+        <!-- linhas start -->
+        <div class="lines section pad-section" id="linhas" data-scroll-section>
+          <div class="container full-size center-item">
+            <p class="paragraph p-one">NOSSAS LINHAS</p>
+            <h1 class="title-2 lines-title">Linhas Curie</h1>
+            <div class="lines-grid row">
+              <div class="line-card center-item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/shampoo-waterless-product.jpg"
+                    alt="Linha Capilar Waterless"
+                  />
+                </div>
+                <h3 class="sub-title">Linha Capilar Waterless</h3>
+                <p class="paragraph">
+                  Shampoo, condicionador e máscara em barra, com hidratação sem
+                  desperdício, com eficácia real.
+                </p>
+                <a
+                  href="./produtos.html?cat=Shampoo"
+                  class="btn center-item"
+                  data-name="VER LINHA"
+                  ><span>VER LINHA</span></a
+                >
+              </div>
+              <div class="line-card center-item">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/serums-kit-product.jpg"
+                    alt="Linha Facial Bioativa"
+                  />
+                </div>
+                <h3 class="sub-title">Linha Facial Bioativa</h3>
+                <p class="paragraph">
+                  Séruns naturais para pele acneica, madura e com melasma. O
+                  Cerrado em forma de cuidado.
+                </p>
+                <a
+                  href="./produtos.html?cat=Seruns"
+                  class="btn center-item"
+                  data-name="VER LINHA"
+                  ><span>VER LINHA</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- linhas end -->
+        <!-- destaques start -->
+        <div
+          class="featured section pad-section"
+          id="destaques"
+          data-scroll-section
+        >
+          <div class="container full-size center-item">
+            <p class="paragraph p-one">MAIS DESEJADOS</p>
+            <h1 class="title-2 lines-title">Destaques</h1>
+            <div class="products-grid" id="featured__grid"></div>
+            <a
+              href="./produtos.html"
+              class="btn center-item"
+              data-name="VER TUDO"
+              ><span>VER CATÁLOGO</span></a
+            >
+          </div>
+        </div>
+        <!-- destaques end -->
+        <!-- challenge start -->
+        <div
+          class="challange section center-item"
+          id="challanges"
+          data-scroll-section
+        >
+          <div class="container full-size center-item">
+            <h1 class="title-3">
+              “Um cientista em seu laboratório não é apenas um técnico; é
+              também uma criança diante de fenômenos naturais que o
+              impressionam como contos de fadas.”
+            </h1>
+            <p class="paragraph quote-author">MARIE CURIE</p>
+          </div>
+        </div>
+        <!-- challenge end -->
+        <!-- reviews start -->
+        <div
+          class="reviews section center-item"
+          id="reviews"
+          data-scroll-section
+        >
+          <div class="container full-size center-item">
+            <p class="paragraph p-one">QUEM USA, CONTA</p>
+            <div class="review-slider" id="review__slider"></div>
+            <div class="review-nav row">
+              <a class="btn hover-btn" id="review__prev">ANTERIOR</a>
+              <a class="btn hover-btn" id="review__next">PRÓXIMO</a>
+            </div>
+          </div>
+        </div>
+        <!-- reviews end -->
+        <!-- contact start  -->
+        <div class="contact section flex" id="contact" data-scroll-section>
+          <div class="left-contact center-item">
+            <p class="paragraph">FALE COM A GENTE</p>
+            <h4 class="sub-title">
+              Tire dúvidas sobre os produtos, faça seu pedido ou venha conhecer
+              os bastidores do Cerrado e do Pantanal.
+            </h4>
+            <div class="contact-links center-item">
+              <a
+                href="https://wa.me/5516982139630"
+                target="_blank"
+                rel="noopener"
+                class="btn center-item"
+                data-name="(16) 98213-9630"
+                ><span>WHATSAPP</span></a
+              >
+              <a
+                href="https://www.instagram.com/curie.biocosmeticos/"
+                target="_blank"
+                rel="noopener"
+                class="btn hover-btn contact-insta"
+                >@curie.biocosmeticos</a
+              >
+            </div>
+          </div>
+          <div class="right-contact center-item">
+            <div class="img-box center-item">
+              <img loading="lazy" decoding="async"
+                src="./images/serums-kit-product.jpg"
+                alt="Kit de séruns Curie"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- contact end -->
+        <!-- oth start -->
+        <div
+          class="oth section full-size pad-section"
+          id="oth"
+          data-scroll-section
+        >
+          <div class="mini-container center-item full-size">
+            <h1 class="title-2">Curie</h1>
+            <div class="oth-content row">
+              <div class="left-oth full-size center-item">
+                <p class="paragraph thin-p">
+                  CIÊNCIA, BIODIVERSIDADE E COMPROMISSO SOCIAL SÃO OS NOSSOS
+                  MAIORES VALORES. CADA FÓRMULA NASCE DE PESQUISA APLICADA E DE
+                  UMA PERGUNTA NORTEADORA: COMO GERAR IMPACTO POSITIVO NA PELE,
+                  NAS PESSOAS E NO BIOMA AO MESMO TEMPO?
+                </p>
+                <p class="paragraph">
+                  A Curie Biocosméticos nasce do encontro entre pesquisa
+                  científica de ponta e a força dos biomas brasileiros. A partir
+                  do Cerrado e do Pantanal, territórios com uma das maiores
+                  biodiversidades do planeta, transformamos frutos nativos em
+                  cosméticos naturais de alta performance, preservando as
+                  histórias, os saberes e as comunidades que habitam esses
+                  lugares.
+                </p>
+              </div>
+              <div class="right-oth full-size center-item">
+                <p class="paragraph">
+                  Não somos apenas uma marca de cosméticos: somos uma empresa de
+                  base científica que integra biotecnologia e nanotecnologia ao
+                  desenvolvimento de produtos com ativos do Cerrado e do
+                  Pantanal, com fórmulas veganas, biodegradáveis, isentas de
+                  plástico e de baixo consumo hídrico.
+                </p>
+                <p class="paragraph">
+                  Construímos nossas operações junto a comunidades indígenas,
+                  quilombolas e pequenos produtores que atuam na coleta e no
+                  manejo sustentável dos frutos. Essa parceria fortalece a
+                  economia local, gera renda e promove inclusão social, porque
+                  cuidar da pele também é cuidar do território.
+                </p>
+              </div>
+            </div>
+            <a
+              href="./sobre.html"
+              class="btn center-item"
+              data-name="NOSSA HISTÓRIA"
+              ><span>SOBRE NÓS</span></a
+            >
+          </div>
+        </div>
+        <!-- oth end -->
+        <!-- footer start -->
+        <footer
+          class="footer section full-size center-item"
+          id="footer"
+          data-scroll-section
+        >
+          <div class="mini-container full-size flex">
+            <div class="left-foot">
+              <p class="paragraph">BEM-VINDA AO NOSSO MUNDO</p>
+              <h1 class="title-2">CURIE</h1>
+              <div class="footer-links row">
+                <div class="left-links">
+                  <p class="paragraph p-one">MENU</p>
+                  <a href="./index.html" class="btn hover-btn">Home</a>
+                  <a href="./sobre.html" class="btn hover-btn">História</a>
+                  <a href="./produtos.html" class="btn hover-btn">Produtos</a>
+                  <a href="./sustentabilidade.html" class="btn hover-btn"
+                    >Sustentabilidade</a
+                  >
+                </div>
+                <div class="right-links">
+                  <p class="paragraph p-one">ATENDIMENTO</p>
+                  <a
+                    href="https://wa.me/5516982139630"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn hover-btn"
+                    >WhatsApp</a
+                  >
+                  <a
+                    href="./sustentabilidade.html#logistica"
+                    class="btn hover-btn"
+                    >Logística reversa</a
+                  >
+                  <a href="./sobre.html#parceiros" class="btn hover-btn"
+                    >Parceiros</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="right-foot">
+              <p class="paragraph">
+                Ciência, beleza e propósito. Biocosméticos desenvolvidos com
+                ativos do Cerrado e do Pantanal, em parceria com as comunidades
+                que cuidam desses territórios.
+              </p>
+              <div class="social-links row">
+                <a
+                  href="https://www.instagram.com/curie.biocosmeticos/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >Instagram</a
+                >
+                <a
+                  href="https://wa.me/5516982139630"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >WhatsApp</a
+                >
+              </div>
+              <p class="paragraph p-one">
+                CNPJ 56.616.169/0001-25 <br />
+                © Curie Biocosméticos 2026
+              </p>
+            </div>
+          </div>
+        </footer>
+        <!-- footer end -->
+      </div>
+      <!-- scroll container end -->
+    </div>
+    <!-- wrapper end -->
+    <!-- scripts -->
+    <script src="./vendor/gsap.min.js"></script>
+    <script src="./vendor/ScrollTrigger.min.js"></script>
+    <script src="./vendor/locomotive-scroll.min.js"></script>
+    <script src="./javascript/produtos-data.js"></script>
+    <script src="./javascript/loja.js"></script>
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>

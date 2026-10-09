@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sala de aula | Escola Curie</title>
+    <link rel="icon" href="/icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/webcurso/css/app.css" />
+  </head>
+  <!-- PROTÓTIPO VISUAL: o player não reproduz vídeo, é maquete -->
+  <body class="app" data-tela="aula">
+    <div class="aula">
+      <!-- ============ coluna principal ============ -->
+      <div class="aula__principal">
+        <!-- player -->
+        <div class="player">
+          <img src="/images/lab-researcher.jpg" alt="Aula em vídeo" />
+          <div class="player__centro">
+            <button class="play-flutuante" aria-label="Reproduzir">
+              <svg viewBox="0 0 24 24" width="26" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </button>
+          </div>
+          <div class="player__controles">
+            <div class="player__linha" title="Clique para navegar">
+              <i></i>
+              <span class="player__marcador" style="left: 18%" title="Fase aquosa"></span>
+              <span class="player__marcador" style="left: 44%" title="Fase oleosa"></span>
+              <span class="player__marcador" style="left: 67%" title="Emulsificação"></span>
+              <span class="player__marcador" style="left: 86%" title="Resfriamento"></span>
+            </div>
+            <div class="player__botoes">
+              <button>
+                <svg viewBox="0 0 24 24" width="18" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+              </button>
+              <button title="Voltar 10 segundos">
+                <svg viewBox="0 0 24 24" width="17" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5L6 9l5 4M6 9h7a5 5 0 1 1 0 10h-3"/></svg>
+                10s
+              </button>
+              <span>11:20 / 29:55</span>
+              <div class="direita">
+                <button>1.25×</button>
+                <button title="Legendas">CC</button>
+                <button title="Capítulos">Capítulos</button>
+                <button title="Tela cheia">
+                  <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- cabeçalho da aula -->
+        <div class="aula__cabeca">
+          <div>
+            <p class="rotulo">Módulo 03 · aula 2 de 7</p>
+            <h1>Fase A, B e C: ordem, temperatura e cisalhamento</h1>
+            <div class="aula__meta">
+              <span>29 min 55 s</span>
+              <span>·</span>
+              <span>3 materiais</span>
+              <span>·</span>
+              <span>Atualizada em abril de 2026</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap">
+            <button class="btn btn-linha btn-pequeno" data-concluir>
+              <svg viewBox="0 0 24 24" width="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l5 5 9-9"/></svg>
+              <span>Marcar como concluída</span>
+            </button>
+            <a href="#" class="btn btn-principal btn-pequeno">
+              Próxima aula
+              <svg viewBox="0 0 24 24" width="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- abas -->
+        <nav class="abas">
+          <button class="aba ativa" data-painel="p-visao">Visão geral</button>
+          <button class="aba" data-painel="p-materiais">Materiais (3)</button>
+          <button class="aba" data-painel="p-notas">Minhas anotações (4)</button>
+          <button class="aba" data-painel="p-transcricao">Transcrição</button>
+          <button class="aba" data-painel="p-perguntas">Perguntas (12)</button>
+        </nav>
+
+        <!-- painel: visão geral -->
+        <section class="painel ativo" id="p-visao">
+          <div style="max-width: 46rem">
+            <p class="chamada" style="color: var(--texto); margin-bottom: 1.5rem">
+              Nesta aula a gente monta a espinha dorsal de qualquer emulsão: o
+              que entra em cada fase, em que temperatura, e por que a ordem de
+              adição muda a textura final do produto.
+            </p>
+            <h4 style="margin-bottom: 1rem">Nesta aula você vai ver</h4>
+            <ul class="lista-check" style="grid-template-columns: 1fr">
+              <li>Como separar os ingredientes entre fase aquosa, oleosa e de resfriamento</li>
+              <li>A janela de temperatura em que o emulsionante realmente trabalha</li>
+              <li>Efeito do cisalhamento no tamanho de glóbulo e na sensorialidade</li>
+              <li>Erros clássicos que quebram a emulsão nas primeiras 48 horas</li>
+            </ul>
+
+            <h4 style="margin: 2.5rem 0 1rem">Capítulos</h4>
+            <div style="border-top: 1px solid var(--linha)">
+              <div class="aula-linha">
+                <span class="tempo-clicavel">00:00</span>
+                <span class="aula-linha__nome">Abertura e o que vamos formular</span>
+              </div>
+              <div class="aula-linha">
+                <span class="tempo-clicavel">05:24</span>
+                <span class="aula-linha__nome">Fase A: água, umectantes e eletrólitos</span>
+              </div>
+              <div class="aula-linha">
+                <span class="tempo-clicavel">13:10</span>
+                <span class="aula-linha__nome">Fase B: óleos nativos e emulsionante</span>
+              </div>
+              <div class="aula-linha">
+                <span class="tempo-clicavel">20:02</span>
+                <span class="aula-linha__nome">Emulsificação: temperatura e rotação</span>
+              </div>
+              <div class="aula-linha">
+                <span class="tempo-clicavel">25:40</span>
+                <span class="aula-linha__nome">Fase C: ativos termolábeis e conservante</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- painel: materiais -->
+        <section class="painel" id="p-materiais">
+          <div class="material">
+            <span class="material__tipo">PDF</span>
+            <div class="material__info">
+              <strong>Ficha de bancada da emulsão base 100 g</strong>
+              <span>820 KB · com tabela de fases preenchida</span>
+            </div>
+            <button class="btn btn-fantasma btn-pequeno">Baixar</button>
+          </div>
+          <div class="material">
+            <span class="material__tipo">XLS</span>
+            <div class="material__info">
+              <strong>Planilha de cálculo de EHL</strong>
+              <span>210 KB · preencha e a planilha sugere o par emulsionante</span>
+            </div>
+            <button class="btn btn-fantasma btn-pequeno">Baixar</button>
+          </div>
+          <div class="material">
+            <span class="material__tipo">LAB</span>
+            <div class="material__info">
+              <strong>Abrir esta fórmula na calculadora</strong>
+              <span>edite os percentuais e gere a pesagem do seu lote</span>
+            </div>
+            <a href="/webcurso/laboratorio.html" class="btn btn-limao btn-pequeno">Abrir</a>
+          </div>
+        </section>
+
+        <!-- painel: anotações -->
+        <section class="painel" id="p-notas">
+          <textarea
+            class="campo-anotacao"
+            placeholder="Escreva uma anotação… ela será salva com o minuto atual do vídeo (11:20)"
+          ></textarea>
+          <div style="display: flex; justify-content: flex-end; margin: 0.8rem 0 2rem">
+            <button class="btn btn-principal btn-pequeno">Salvar anotação</button>
+          </div>
+
+          <div class="anotacao">
+            <span class="tempo-clicavel">05:24</span>
+            <div>
+              <p style="color: var(--texto)">
+                A água precisa ser destilada, porque água mineral tem sais que
+                desestabilizam a emulsão.
+              </p>
+            </div>
+          </div>
+          <div class="anotacao">
+            <span class="tempo-clicavel">13:10</span>
+            <div>
+              <p style="color: var(--texto)">
+                Acuri entra na fase B junto com o emulsionante, nunca depois do
+                resfriamento.
+              </p>
+            </div>
+          </div>
+          <div class="anotacao">
+            <span class="tempo-clicavel">20:02</span>
+            <div>
+              <p style="color: var(--texto)">
+                Janela dos 70 a 75 °C nas duas fases. Testar com termômetro
+                infravermelho.
+              </p>
+            </div>
+          </div>
+          <div class="anotacao">
+            <span class="tempo-clicavel">25:40</span>
+            <div>
+              <p style="color: var(--texto)">
+                Conservante só abaixo de 40 °C. Anotar isso na ficha do próximo
+                lote.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- painel: transcrição -->
+        <section class="painel" id="p-transcricao">
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem">
+            <div class="busca" style="max-width: 22rem; display: flex">
+              <svg viewBox="0 0 20 20" width="15" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="9" r="5.5"/><path d="M13 13l4 4"/></svg>
+              <input type="text" placeholder="Buscar na transcrição" />
+            </div>
+            <button class="btn btn-fantasma btn-pequeno">Baixar .txt</button>
+          </div>
+          <div class="transcricao">
+            <p><span class="tempo-clicavel">05:24</span> Então, a fase A é a fase aquosa. Aqui entra a água destilada, os umectantes, glicerina e propanodiol, e qualquer sal que a gente precise dissolver.</p>
+            <p class="atual"><span class="tempo-clicavel">11:20</span> Repare que eu não coloco o ativo agora. Se ele for termolábil, ele vai morrer nessa temperatura. Ativo sensível entra na fase C, sempre.</p>
+            <p><span class="tempo-clicavel">13:10</span> A fase B é a oleosa: manteigas, óleos vegetais e o emulsionante. É aqui que entram o acuri e a bocaiúva, que são os nossos óleos de estrutura.</p>
+            <p><span class="tempo-clicavel">16:40</span> Uma coisa que eu vejo muito: pessoa aquecer só uma fase. As duas precisam estar na mesma faixa de temperatura, senão o sistema não emulsiona direito.</p>
+            <p><span class="tempo-clicavel">20:02</span> Agora a emulsificação. Eu verto a fase oleosa sobre a aquosa, nunca o contrário, e mantenho o cisalhamento constante por três minutos.</p>
+            <p><span class="tempo-clicavel">25:40</span> Abaixo de 40 graus, a fase C: conservante, ativos, ajuste de pH e essência, se houver.</p>
+          </div>
+        </section>
+
+        <!-- painel: perguntas -->
+        <section class="painel" id="p-perguntas">
+          <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap">
+            <input
+              type="text"
+              class="campo-anotacao"
+              style="min-height: auto; flex: 1; padding: 0.9rem 1.2rem"
+              placeholder="Perguntar sobre esta aula…"
+            />
+            <button class="btn btn-principal btn-pequeno">Enviar pergunta</button>
+          </div>
+
+          <article class="pergunta">
+            <div class="pergunta__topo">
+              <div class="avatar">CM</div>
+              <strong>Carla Mendes</strong>
+              <em>há 2 dias · 12:40 do vídeo</em>
+            </div>
+            <p style="color: var(--texto)">
+              Se eu usar manteiga de karité em vez de manteiga de manga, preciso
+              recalcular o EHL da fase oleosa?
+            </p>
+            <div class="acoes-pergunta">
+              <button>▲ 8 úteis</button>
+              <button>Responder</button>
+            </div>
+
+            <div class="resposta">
+              <div class="pergunta__topo">
+                <div class="avatar avatar--marrom">DQ</div>
+                <strong>Dra. Daniely</strong>
+                <em>professora · há 1 dia</em>
+              </div>
+              <p style="color: var(--texto)">
+                Precisa sim, Carla. Cada matéria-prima tem o seu EHL requerido, e
+                o karité puxa o valor para baixo. Use a planilha da aula: troque
+                a linha da manteiga e o par emulsionante se ajusta sozinho. Se a
+                diferença passar de 1 ponto, refaça o teste de estabilidade.
+              </p>
+              <div class="acoes-pergunta">
+                <button>▲ 23 úteis</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="pergunta">
+            <div class="pergunta__topo">
+              <div class="avatar">RF</div>
+              <strong>Renata Freitas</strong>
+              <em>há 4 dias · 20:10 do vídeo</em>
+            </div>
+            <p style="color: var(--texto)">
+              Dá para fazer o cisalhamento com mixer comum ou compromete o
+              tamanho de glóbulo?
+            </p>
+            <div class="acoes-pergunta">
+              <button>▲ 5 úteis</button>
+              <button>Responder</button>
+            </div>
+          </article>
+
+          <article class="pergunta">
+            <div class="pergunta__topo">
+              <div class="avatar">LS</div>
+              <strong>Lúcia Santos</strong>
+              <em>há 6 dias · 26:02 do vídeo</em>
+            </div>
+            <p style="color: var(--texto)">
+              Qual termômetro vocês recomendam para acompanhar as duas fases ao
+              mesmo tempo?
+            </p>
+            <div class="acoes-pergunta">
+              <button>▲ 3 úteis</button>
+              <button>Responder</button>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <!-- ============ trilha do curso ============ -->
+      <aside class="trilha">
+        <div class="trilha__cabeca">
+          <p class="rotulo">Conteúdo do curso</p>
+          <h4 style="margin: 0.5rem 0 0.8rem">Cosmetologia Natural Aplicada</h4>
+          <div class="barra"><span style="width: 62%"></span></div>
+          <div class="barra-legenda">
+            <span>42 de 68 aulas</span>
+            <span>62%</span>
+          </div>
+        </div>
+
+        <div class="trilha__modulo">
+          <span>Módulo 02 · Ativos nativos <em>8/8</em></span>
+          <div class="trilha__aula concluida">
+            <span class="trilha__check">✓</span>
+            <div class="trilha__texto">
+              <strong>Baru: compostos fenólicos</strong>
+              <span>21:02</span>
+            </div>
+          </div>
+          <div class="trilha__aula concluida">
+            <span class="trilha__check">✓</span>
+            <div class="trilha__texto">
+              <strong>Biblioteca de ativos na prática</strong>
+              <span>interativo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trilha__modulo">
+          <span>Módulo 03 · Emulsões <em>1/7</em></span>
+          <div class="trilha__aula concluida">
+            <span class="trilha__check">✓</span>
+            <div class="trilha__texto">
+              <strong>O/A, A/O e o cálculo de EHL</strong>
+              <span>34:20</span>
+            </div>
+          </div>
+          <div class="trilha__aula atual">
+            <span class="trilha__check">▶</span>
+            <div class="trilha__texto">
+              <strong>Fase A, B e C: ordem, temperatura e cisalhamento</strong>
+              <span>29:55 · assistindo</span>
+            </div>
+          </div>
+          <div class="trilha__aula">
+            <span class="trilha__check"></span>
+            <div class="trilha__texto">
+              <strong>Calculadora de formulação: primeiro lote</strong>
+              <span>interativo</span>
+            </div>
+          </div>
+          <div class="trilha__aula">
+            <span class="trilha__check"></span>
+            <div class="trilha__texto">
+              <strong>Espessantes e ajuste de viscosidade</strong>
+              <span>22:35</span>
+            </div>
+          </div>
+          <div class="trilha__aula">
+            <span class="trilha__check"></span>
+            <div class="trilha__texto">
+              <strong>Sensorialidade: toque seco x veludo</strong>
+              <span>18:44</span>
+            </div>
+          </div>
+          <div class="trilha__aula">
+            <span class="trilha__check"></span>
+            <div class="trilha__texto">
+              <strong>Quando a emulsão quebra: diagnóstico</strong>
+              <span>27:10</span>
+            </div>
+          </div>
+          <div class="trilha__aula">
+            <span class="trilha__check"></span>
+            <div class="trilha__texto">
+              <strong>Avaliação do módulo</strong>
+              <span>10 questões</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trilha__modulo">
+          <span>Módulo 04 · Conservação <em>0/6</em></span>
+          <div class="trilha__aula">
+            <span class="trilha__check"></span>
+            <div class="trilha__texto">
+              <strong>Sistemas conservantes aceitos</strong>
+              <span>27:40</span>
+            </div>
+          </div>
+          <div class="trilha__aula">
+            <span class="trilha__check"></span>
+            <div class="trilha__texto">
+              <strong>Challenge test na prática</strong>
+              <span>19:30</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="/webcurso/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratório | Escola Curie</title>
+    <link rel="icon" href="/icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/webcurso/css/app.css" />
+  </head>
+  <!-- PROTÓTIPO VISUAL: os dados técnicos são exemplos de preenchimento
+       e precisam ser revisados pela Dra. Daniely antes de qualquer uso -->
+  <body class="app" data-tela="laboratorio">
+    <main class="conteudo">
+      <div class="conteudo__cabeca">
+        <div>
+          <p class="rotulo">Ferramentas exclusivas da turma</p>
+          <h1>Laboratório</h1>
+        </div>
+        <a href="/webcurso/aula.html" class="btn btn-fantasma btn-pequeno">Voltar para a aula</a>
+      </div>
+
+      <nav class="abas">
+        <button class="aba ativa" data-painel="p-biblioteca">Biblioteca de ativos</button>
+        <button class="aba" data-painel="p-calculadora">Calculadora de formulação</button>
+        <button class="aba" data-painel="p-caderno">Caderno de bancada</button>
+      </nav>
+
+      <!-- ============ BIBLIOTECA ============ -->
+      <section class="painel ativo" id="p-biblioteca">
+        <div
+          style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; align-items: center"
+        >
+          <div class="busca" style="display: flex; max-width: 24rem">
+            <svg viewBox="0 0 20 20" width="15" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="9" r="5.5"/><path d="M13 13l4 4"/></svg>
+            <input type="text" placeholder="Buscar ativo, INCI ou função" />
+          </div>
+          <span class="tag tag-marrom">Todos (24)</span>
+          <span class="tag">Óleos</span>
+          <span class="tag">Manteigas</span>
+          <span class="tag">Extratos</span>
+          <span class="tag">Argilas</span>
+          <span class="tag">Tensoativos</span>
+        </div>
+
+        <div class="ativos-grade">
+          <article class="ficha-ativo">
+            <div class="ficha-ativo__foto">
+              <img src="/images/cerrado-fruits.jpg" alt="Acuri" />
+            </div>
+            <div class="ficha-ativo__corpo">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem">
+                <h4>Acuri</h4>
+                <span class="tag tag-limao">óleo</span>
+              </div>
+              <p class="ficha-ativo__inci">Attalea phalerata seed oil</p>
+              <p style="font-size: 0.88rem">
+                Rico em ácido láurico e oleico. Restaura a barreira cutânea e dá
+                corpo à fase oleosa sem pesar no toque.
+              </p>
+              <div class="ficha-ativo__dados">
+                <div>Uso <strong>3 a 15%</strong></div>
+                <div>Fase <strong>B (oleosa)</strong></div>
+                <div>Fusão <strong>24 °C</strong></div>
+                <div>Origem <strong>Pantanal</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ficha-ativo">
+            <div class="ficha-ativo__foto">
+              <img src="/images/cerrado-flowers.jpg" alt="Bocaiúva" />
+            </div>
+            <div class="ficha-ativo__corpo">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem">
+                <h4>Bocaiúva</h4>
+                <span class="tag tag-limao">óleo</span>
+              </div>
+              <p class="ficha-ativo__inci">Acrocomia aculeata fruit oil</p>
+              <p style="font-size: 0.88rem">
+                Carotenoides e ácido oleico. Antioxidante de cor intensa.
+                Atenção ao impacto na cor final do produto.
+              </p>
+              <div class="ficha-ativo__dados">
+                <div>Uso <strong>2 a 10%</strong></div>
+                <div>Fase <strong>B (oleosa)</strong></div>
+                <div>Fusão <strong>líquido</strong></div>
+                <div>Origem <strong>Cerrado</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ficha-ativo">
+            <div class="ficha-ativo__foto">
+              <img src="/images/cerrado-biodiversity.jpg" alt="Guavira" />
+            </div>
+            <div class="ficha-ativo__corpo">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem">
+                <h4>Guavira</h4>
+                <span class="tag">extrato</span>
+              </div>
+              <p class="ficha-ativo__inci">Campomanesia adamantium fruit extract</p>
+              <p style="font-size: 0.88rem">
+                Vitamina C e flavonoides. Revitalizante e antimicrobiano e
+                termolábil, entra sempre na fase C.
+              </p>
+              <div class="ficha-ativo__dados">
+                <div>Uso <strong>1 a 5%</strong></div>
+                <div>Fase <strong>C (fria)</strong></div>
+                <div>pH ideal <strong>4,5 a 6,0</strong></div>
+                <div>Origem <strong>Cerrado</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ficha-ativo">
+            <div class="ficha-ativo__foto">
+              <img src="/images/cerrado-forest.jpg" alt="Baru" />
+            </div>
+            <div class="ficha-ativo__corpo">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem">
+                <h4>Baru</h4>
+                <span class="tag tag-limao">óleo</span>
+              </div>
+              <p class="ficha-ativo__inci">Dipteryx alata seed oil</p>
+              <p style="font-size: 0.88rem">
+                Compostos fenólicos e proteínas. Alta atividade antioxidante,
+                muito usado em séruns capilares.
+              </p>
+              <div class="ficha-ativo__dados">
+                <div>Uso <strong>2 a 12%</strong></div>
+                <div>Fase <strong>B (oleosa)</strong></div>
+                <div>Fusão <strong>líquido</strong></div>
+                <div>Origem <strong>Cerrado</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ficha-ativo">
+            <div class="ficha-ativo__foto">
+              <img src="/images/botanical-ingredients.png" alt="Pracaxi" />
+            </div>
+            <div class="ficha-ativo__corpo">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem">
+                <h4>Pracaxi</h4>
+                <span class="tag tag-limao">óleo</span>
+              </div>
+              <p class="ficha-ativo__inci">Pentaclethra macroloba seed oil</p>
+              <p style="font-size: 0.88rem">
+                Maior teor conhecido de ácido behênico. Excelente para
+                condicionadores sólidos e reparação de pontas.
+              </p>
+              <div class="ficha-ativo__dados">
+                <div>Uso <strong>3 a 20%</strong></div>
+                <div>Fase <strong>B (oleosa)</strong></div>
+                <div>Fusão <strong>28 °C</strong></div>
+                <div>Origem <strong>Amazônia</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="ficha-ativo">
+            <div class="ficha-ativo__foto">
+              <img src="/images/pantanal-lake.jpg" alt="Argila branca" />
+            </div>
+            <div class="ficha-ativo__corpo">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem">
+                <h4>Argila branca</h4>
+                <span class="tag">argila</span>
+              </div>
+              <p class="ficha-ativo__inci">Kaolin</p>
+              <p style="font-size: 0.88rem">
+                Suave e absorvente. Estrutura barras sólidas e equilibra a
+                oleosidade sem ressecar o couro cabeludo.
+              </p>
+              <div class="ficha-ativo__dados">
+                <div>Uso <strong>5 a 30%</strong></div>
+                <div>Fase <strong>sólida</strong></div>
+                <div>pH <strong>neutro</strong></div>
+                <div>Origem <strong>mineral</strong></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ CALCULADORA ============ -->
+      <section class="painel" id="p-calculadora">
+        <div
+          style="display: flex; gap: 2rem; align-items: flex-end; flex-wrap: wrap; margin-bottom: 2rem"
+        >
+          <div>
+            <p class="rotulo">Fórmula aberta</p>
+            <h3 style="margin-top: 0.4rem">Emulsão base para creme facial leve</h3>
+          </div>
+          <div style="margin-left: auto; display: flex; gap: 1.5rem; align-items: flex-end; flex-wrap: wrap">
+            <label>
+              <span class="rotulo-fraco" style="display: block; margin-bottom: 0.4rem">Tamanho do lote (g)</span>
+              <input
+                type="number"
+                id="lote"
+                value="100"
+                min="10"
+                step="10"
+                class="entrada-mini"
+                style="width: 7rem; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.95rem"
+              />
+            </label>
+            <button class="btn btn-fantasma btn-pequeno">Salvar versão</button>
+            <button class="btn btn-principal btn-pequeno">Exportar ficha</button>
+          </div>
+        </div>
+
+        <table class="tabela" id="formulacao">
+          <thead>
+            <tr>
+              <th style="width: 8rem">Fase</th>
+              <th>Matéria-prima</th>
+              <th style="width: 12rem">Função</th>
+              <th style="width: 8rem">%</th>
+              <th style="width: 8rem; text-align: right">Pesagem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-item>
+              <td class="fase" rowspan="3">A · aquosa</td>
+              <td>Água destilada</td>
+              <td>veículo</td>
+              <td><input class="pct entrada-mini" type="number" value="68.5" step="0.5" /></td>
+              <td class="numero gramas">68.5 g</td>
+            </tr>
+            <tr data-item>
+              <td>Glicerina vegetal</td>
+              <td>umectante</td>
+              <td><input class="pct entrada-mini" type="number" value="4" step="0.5" /></td>
+              <td class="numero gramas">4.0 g</td>
+            </tr>
+            <tr data-item>
+              <td>Goma xantana</td>
+              <td>espessante</td>
+              <td><input class="pct entrada-mini" type="number" value="0.5" step="0.1" /></td>
+              <td class="numero gramas">0.5 g</td>
+            </tr>
+
+            <tr data-item>
+              <td class="fase" rowspan="4">B · oleosa</td>
+              <td>Óleo de acuri</td>
+              <td>emoliente / barreira</td>
+              <td><input class="pct entrada-mini" type="number" value="8" step="0.5" /></td>
+              <td class="numero gramas">8.0 g</td>
+            </tr>
+            <tr data-item>
+              <td>Óleo de bocaiúva</td>
+              <td>antioxidante</td>
+              <td><input class="pct entrada-mini" type="number" value="4" step="0.5" /></td>
+              <td class="numero gramas">4.0 g</td>
+            </tr>
+            <tr data-item>
+              <td>Álcool cetearílico</td>
+              <td>coemulsionante</td>
+              <td><input class="pct entrada-mini" type="number" value="4" step="0.5" /></td>
+              <td class="numero gramas">4.0 g</td>
+            </tr>
+            <tr data-item>
+              <td>Olivem 1000</td>
+              <td>emulsionante O/A</td>
+              <td><input class="pct entrada-mini" type="number" value="5" step="0.5" /></td>
+              <td class="numero gramas">5.0 g</td>
+            </tr>
+
+            <tr data-item>
+              <td class="fase" rowspan="4">C · fria</td>
+              <td>Extrato de guavira</td>
+              <td>ativo revitalizante</td>
+              <td><input class="pct entrada-mini" type="number" value="3" step="0.5" /></td>
+              <td class="numero gramas">3.0 g</td>
+            </tr>
+            <tr data-item>
+              <td>D-pantenol</td>
+              <td>reparador</td>
+              <td><input class="pct entrada-mini" type="number" value="2" step="0.5" /></td>
+              <td class="numero gramas">2.0 g</td>
+            </tr>
+            <tr data-item>
+              <td>Conservante (blend)</td>
+              <td>segurança microbiológica</td>
+              <td><input class="pct entrada-mini" type="number" value="0.8" step="0.1" /></td>
+              <td class="numero gramas">0.8 g</td>
+            </tr>
+            <tr data-item>
+              <td>Vitamina E</td>
+              <td>antioxidante da fase oleosa</td>
+              <td><input class="pct entrada-mini" type="number" value="0.2" step="0.1" /></td>
+              <td class="numero gramas">0.2 g</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">
+                Total <em id="aviso-total" style="font-style: normal; opacity: 0.6">fórmula fechada em 100%</em>
+              </td>
+              <td></td>
+              <td id="total-pct">100.0%</td>
+              <td class="numero" id="total-g" style="text-align: right">100 g</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div
+          style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem"
+          class="grade-3"
+        >
+          <div class="metrica">
+            <span>pH alvo</span>
+            <strong style="font-size: 1.8rem">5,0 a 5,5</strong>
+            <span>ajustar com ácido lático</span>
+          </div>
+          <div class="metrica">
+            <span>Temperatura das fases</span>
+            <strong style="font-size: 1.8rem">70 a 75 °C</strong>
+            <span>A e B na mesma faixa</span>
+          </div>
+          <div class="metrica metrica--destaque">
+            <span>Custo estimado do lote</span>
+            <strong style="font-size: 1.8rem">R$ 11,40</strong>
+            <span>R$ 0,114 por grama</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CADERNO ============ -->
+      <section class="painel" id="p-caderno">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap"
+        >
+          <p class="chamada" style="max-width: 38rem">
+            Cada teste registrado com data, lote e observação, como um caderno
+            de laboratório de verdade. A professora pode comentar nas suas
+            entradas.
+          </p>
+          <button class="btn btn-principal btn-pequeno">Nova entrada</button>
+        </div>
+
+        <article class="experimento">
+          <div class="experimento__data">
+            28 abr 2026<br />Lote 004
+          </div>
+          <div>
+            <h4>Emulsão base com acuri 8%</h4>
+            <p>
+              Estável nas primeiras 48h. Toque mais pesado que o esperado.
+              Reduzir álcool cetearílico para 3% no próximo lote.
+            </p>
+          </div>
+          <span class="tag tag-limao">estável</span>
+        </article>
+
+        <article class="experimento">
+          <div class="experimento__data">
+            21 abr 2026<br />Lote 003
+          </div>
+          <div>
+            <h4>Sérum facial com guavira</h4>
+            <p>
+              Separou em 24h. Suspeita: extrato adicionado a 55 °C. Refazer
+              adicionando abaixo de 40 °C.
+            </p>
+          </div>
+          <span class="tag">refazer</span>
+        </article>
+
+        <article class="experimento">
+          <div class="experimento__data">
+            14 abr 2026<br />Lote 002
+          </div>
+          <div>
+            <h4>Shampoo sólido, teste de dureza</h4>
+            <p>
+              Barra desmanchando no porta-sabonete. Aumentar argila branca de
+              18% para 24% e testar novamente.
+            </p>
+          </div>
+          <span class="tag">ajustar</span>
+        </article>
+
+        <article class="experimento">
+          <div class="experimento__data">
+            07 abr 2026<br />Lote 001
+          </div>
+          <div>
+            <h4>Primeiro teste de emulsão</h4>
+            <p>
+              Quebrou na hora. Fases em temperaturas diferentes (A a 72 °C, B a
+              50 °C). Anotado na aula 3.2.
+            </p>
+          </div>
+          <span class="tag">quebrou</span>
+        </article>
+      </section>
+    </main>
+
+    <script src="/webcurso/js/app.js"></script>
+  </body>
+</html>

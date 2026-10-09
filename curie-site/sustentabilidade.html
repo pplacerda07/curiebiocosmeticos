@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustentabilidade | Curie Biocosméticos</title>
+    <meta
+      name="description"
+      content="Ciência, comunidades e biomas em uma cadeia ética de beleza e conservação: biodiversidade do Cerrado e do Pantanal, parcerias locais e logística reversa."
+    />
+    <!-- a foto do topo comeca a baixar antes do CSS -->
+    <link rel="preload" as="image" href="./images/hero-lagoon-aerial.jpg" fetchpriority="high" />
+    <link rel="icon" href="./icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- nav start -->
+    <nav class="nav" id="nav">
+      <div class="nav__container row">
+        <a href="#" class="btn shop-btn row nav-btn" id="cart__btn">
+          <div class="img-box center-item transition">
+            <img src="./icons/shopping-cart.svg" alt="Carrinho" />
+            <span class="cart-count" id="cart__count">0</span>
+          </div>
+          <div class="hover-btn transition">CARRINHO</div>
+        </a>
+        <a href="./index.html" class="logo-btn nav-btn" id="logo__btn">
+          <img src="./icons/logo.svg" alt="Curie Biocosméticos" class="logo-dark" />
+          <img src="./icons/logo-claro.svg" alt="" class="logo-light" aria-hidden="true" />
+        </a>
+        <a class="hamb__btn hover-btn nav-btn" id="hamb__btn">MENU</a>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- hamb menu start -->
+    <div class="hamb__menu center-item" id="hamb__menu">
+      <a class="btn hover-btn close-btn" id="close-btn">FECHAR</a>
+      <div class="hamb-links start-item">
+        <p class="paragraph">MENU</p>
+        <a href="./index.html" class="btn hover-btn hamb-btn">Home</a>
+        <a href="./sobre.html" class="btn hover-btn hamb-btn">História</a>
+        <a href="./produtos.html" class="btn hover-btn hamb-btn">Produtos</a>
+        <a href="./sustentabilidade.html" class="btn hover-btn hamb-btn"
+          >Sustentabilidade</a
+        >
+      </div>
+      <div class="hamb-links-two start-item">
+        <p class="paragraph">NESTA PÁGINA</p>
+        <a href="#biomas" class="btn hover-btn hamb-btn-two">BIOMAS</a>
+        <a href="#comunidades" class="btn hover-btn hamb-btn-two">COMUNIDADES</a>
+        <a href="#logistica" class="btn hover-btn hamb-btn-two"
+          >LOGÍSTICA REVERSA</a
+        >
+      </div>
+      <p class="paragraph dev-p">
+        Siga:
+        <span
+          ><a
+            href="https://www.instagram.com/curie.biocosmeticos/"
+            target="_blank"
+            rel="noopener"
+            class="btn hover-btn"
+            >@curie.biocosmeticos</a
+          ></span
+        >
+      </p>
+    </div>
+    <!-- hamb menu end -->
+
+    <div class="wrapper" id="wrapper">
+      <div class="scroll__container" id="scroll__container">
+        <!-- hero start -->
+        <div class="page-hero section center-item" id="topo" data-scroll-section>
+          <div class="bg-container full-size">
+            <div
+              class="parallax-container full-size"
+              data-scroll
+              data-scroll-speed="-4"
+              style="background: url(./images/hero-lagoon-aerial.jpg) no-repeat"
+            ></div>
+          </div>
+          <div class="page-hero__content">
+            <p class="paragraph p-one">CADEIA ÉTICA</p>
+            <h1 class="title-2">Sustentabilidade</h1>
+            <p class="paragraph">
+              Unindo ciência, comunidades e biomas em uma cadeia ética de beleza
+              e conservação.
+            </p>
+          </div>
+        </div>
+        <!-- hero end -->
+
+        <!-- biomas start -->
+        <div class="story section" id="biomas" data-scroll-section>
+          <div class="container full-size">
+            <div class="story__grid flex">
+              <div class="story__text">
+                <p class="paragraph p-one">CERRADO E PANTANAL</p>
+                <h2>Biomas que sustentam vida, ciência e futuro</h2>
+                <p class="paragraph">
+                  O Cerrado e o Pantanal estão entre os biomas mais ricos do
+                  mundo, abrigando uma biodiversidade única que sustenta
+                  espécies, regula o clima e mantém modos de vida inteiros.
+                  Preservar esses ecossistemas é essencial para garantir
+                  equilíbrio ambiental e continuidade dos recursos naturais,
+                  incluindo uma vasta variedade de frutos nativos ainda pouco
+                  explorados, mas com enorme potencial biológico e econômico.
+                </p>
+                <p class="paragraph">
+                  Na Curie, esses biomas não são apenas cenário: são fonte de
+                  inspiração e de ativos. Acuri, bocaiúva, guavira e baru são
+                  exemplos de frutos que concentram ácidos graxos de alta
+                  qualidade, carotenoides, vitamina C, flavonoides e compostos
+                  fenólicos com intensa ação antioxidante, anti-inflamatória e
+                  reparadora.
+                </p>
+              </div>
+              <div class="story__pic">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/pantanal-lake.jpg"
+                    alt="Biodiversidade do Cerrado e Pantanal"
+                  />
+                </div>
+                <p class="credit">© LUIZ FELIPE MENDES</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- biomas end -->
+
+        <!-- biocosmética start -->
+        <div class="story section alt" id="biocosmetica" data-scroll-section>
+          <div class="container full-size">
+            <div class="story__grid flex">
+              <div class="story__pic">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/cerrado-forest.jpg"
+                    alt="Biocosmética com frutos nativos"
+                  />
+                </div>
+                <p class="credit">© LUIZ FELIPE MENDES</p>
+              </div>
+              <div class="story__text">
+                <p class="paragraph p-one">IMPACTO NO TERRITÓRIO</p>
+                <h2>Quando cuidar da pele também é cuidar do bioma</h2>
+                <p class="paragraph">
+                  Ao transformar frutos nativos em ativos cosméticos, a Curie
+                  adota um modelo de biocosmética que vai além da estética. Cada
+                  fórmula é pensada para proporcionar hidratação, regeneração,
+                  proteção celular e equilíbrio microbiológico da pele, mas
+                  sempre conectada a uma pergunta central: qual o impacto disso
+                  no território?
+                </p>
+                <p class="paragraph">
+                  A valorização desses frutos reforça a necessidade de conservar
+                  Cerrado e Pantanal, ao mesmo tempo em que gera oportunidades
+                  sustentáveis para as comunidades locais. Ao apoiar cadeias
+                  produtivas baseadas em manejo responsável, a marca contribui
+                  para que a biodiversidade se torne aliada do desenvolvimento
+                  regional, e não vítima da exploração predatória.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- biocosmética end -->
+
+        <!-- comunidades start -->
+        <div class="communities section" id="comunidades" data-scroll-section>
+          <div class="container full-size">
+            <div class="story__grid flex">
+              <div class="story__text">
+                <p class="paragraph p-one">PESSOAS NO CENTRO</p>
+                <h2>Pessoas no centro da cadeia produtiva</h2>
+                <p class="paragraph">
+                  Na Curie Biocosméticos, sustentabilidade não é apenas um
+                  conceito técnico, mas uma relação concreta com quem está na
+                  base da cadeia produtiva. A marca constrói suas operações
+                  junto a comunidades indígenas, quilombolas e pequenos
+                  produtores que atuam na coleta e no manejo sustentável de
+                  frutos nativos do Pantanal e do Cerrado.
+                </p>
+                <p class="paragraph">
+                  Essa parceria fortalece a economia local, gera renda e promove
+                  inclusão social, valorizando o trabalho de agricultores
+                  familiares, mulheres coletoras e jovens empreendedores. Ao
+                  integrar saberes tradicionais ao desenvolvimento de cosméticos
+                  naturais, a Curie respeita práticas culturais, preserva o
+                  bioma e incentiva a permanência das famílias em seus
+                  territórios.
+                </p>
+                <div class="communities__grid">
+                  <div class="community">
+                    <strong>ALDEIA TERENA DE LALIMA</strong>
+                    <span>MIRANDA, MS</span>
+                  </div>
+                  <div class="community">
+                    <strong>PROJETO BENEFICENTE FREI JONAS</strong>
+                    <span>COMUNIDADE LAGEADO, CAMPO GRANDE, MS</span>
+                  </div>
+                  <div class="community">
+                    <strong>PROJETO MEU QUINTAL É MAIOR QUE O MUNDO</strong>
+                    <span>ASSENTAMENTO 72, CORUMBÁ, MS</span>
+                  </div>
+                  <div class="community">
+                    <strong>ASSENTAMENTO 72</strong>
+                    <span>CORUMBÁ, MS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="story__pic">
+                <div class="img-box">
+                  <img loading="lazy" decoding="async"
+                    src="./images/community-partners-collage.jpg"
+                    alt="Comunidades parceiras da Curie"
+                  />
+                </div>
+                <p class="credit">PROJETO MEU QUINTAL É MAIOR QUE O MUNDO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- comunidades end -->
+
+        <!-- logística reversa start -->
+        <div class="benefits section" id="logistica" data-scroll-section>
+          <div class="container full-size">
+            <p class="paragraph p-one">EMBALAGENS</p>
+            <h1 class="title-2 lines-title">
+              Do frasco de volta à natureza
+            </h1>
+            <p class="paragraph" style="max-width: 52rem">
+              A sustentabilidade da Curie também passa pelas embalagens. A
+              logística reversa é o conjunto de ações e procedimentos que
+              permitem fazer o caminho inverso do produto após o uso: em vez de
+              virar lixo, a embalagem retorna para o fabricante ou para a cadeia
+              produtiva de forma ambientalmente correta.
+            </p>
+            <div class="benefits__grid flex">
+              <ul>
+                <li>Evita o acúmulo de resíduos sólidos urbanos</li>
+                <li>
+                  Reduz a extração de recursos naturais necessários para
+                  fabricar novos frascos
+                </li>
+                <li>
+                  Diminui emissões associadas à produção e ao transporte de
+                  novas embalagens
+                </li>
+                <li>
+                  Devolve valor ao material, que volta para a cadeia produtiva
+                </li>
+              </ul>
+              <div class="selo">
+                <img src="./icons/selo.svg" alt="Selo de autenticidade Curie" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- logística reversa end -->
+
+        <!-- princípios start -->
+        <div class="seals section" id="principios" data-scroll-section>
+          <div class="container full-size">
+            <p class="paragraph p-one">COMPROMISSO COM O PLANETA</p>
+            <h1 class="title-2 lines-title">Princípios de sustentabilidade</h1>
+            <div class="principles-box">
+              <img loading="lazy" decoding="async"
+                src="./images/sustainability-principles.png"
+                alt="Princípios de sustentabilidade: plastic free, cruelty free, eco friendly, ingredientes naturais"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- princípios end -->
+
+        <!-- cta start -->
+        <div class="cta section center-item" id="cta" data-scroll-section>
+          <div class="container center-item">
+            <h2>Cuidado que volta para o território</h2>
+            <p class="paragraph">
+              Cada produto Curie carrega o compromisso de valorizar o bioma,
+              apoiar comunidades locais e promover um cuidado verdadeiramente
+              sustentável.
+            </p>
+            <a
+              href="./produtos.html"
+              class="btn center-item"
+              data-name="CATÁLOGO"
+              ><span>VER PRODUTOS</span></a
+            >
+          </div>
+        </div>
+        <!-- cta end -->
+
+        <!-- footer start -->
+        <footer
+          class="footer section full-size center-item"
+          id="footer"
+          data-scroll-section
+        >
+          <div class="mini-container full-size flex">
+            <div class="left-foot">
+              <p class="paragraph">BEM-VINDA AO NOSSO MUNDO</p>
+              <h1 class="title-2">CURIE</h1>
+              <div class="footer-links row">
+                <div class="left-links">
+                  <p class="paragraph p-one">MENU</p>
+                  <a href="./index.html" class="btn hover-btn">Home</a>
+                  <a href="./sobre.html" class="btn hover-btn">História</a>
+                  <a href="./produtos.html" class="btn hover-btn">Produtos</a>
+                  <a href="./sustentabilidade.html" class="btn hover-btn"
+                    >Sustentabilidade</a
+                  >
+                </div>
+                <div class="right-links">
+                  <p class="paragraph p-one">ATENDIMENTO</p>
+                  <a
+                    href="https://wa.me/5516982139630"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn hover-btn"
+                    >WhatsApp</a
+                  >
+                  <a
+                    href="./sustentabilidade.html#logistica"
+                    class="btn hover-btn"
+                    >Logística reversa</a
+                  >
+                  <a href="./sobre.html#parceiros" class="btn hover-btn"
+                    >Parceiros</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="right-foot">
+              <p class="paragraph">
+                Ciência, beleza e propósito. Biocosméticos desenvolvidos com
+                ativos do Cerrado e do Pantanal, em parceria com as comunidades
+                que cuidam desses territórios.
+              </p>
+              <div class="social-links row">
+                <a
+                  href="https://www.instagram.com/curie.biocosmeticos/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >Instagram</a
+                >
+                <a
+                  href="https://wa.me/5516982139630"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn hover-btn"
+                  >WhatsApp</a
+                >
+              </div>
+              <p class="paragraph p-one">
+                CNPJ 56.616.169/0001-25 <br />
+                © Curie Biocosméticos 2026
+              </p>
+            </div>
+          </div>
+        </footer>
+        <!-- footer end -->
+      </div>
+    </div>
+
+    <script src="./vendor/gsap.min.js"></script>
+    <script src="./vendor/ScrollTrigger.min.js"></script>
+    <script src="./vendor/locomotive-scroll.min.js"></script>
+    <script src="./javascript/produtos-data.js"></script>
+    <script src="./javascript/loja.js"></script>
+    <script src="./javascript/index.js"></script>
+  </body>
+</html>

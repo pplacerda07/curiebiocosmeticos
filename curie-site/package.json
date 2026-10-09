@@ -1,0 +1,13 @@
+{
+  "name": "curie-site",
+  "version": "1.0.0",
+  "description": "Site da Curie Biocosmeticos — mockup awwwards + identidade visual 2026",
+  "scripts": {
+    "css": "sass --no-source-map scss/main.scss css/style.css",
+    "watch": "sass --no-source-map --watch scss/main.scss css/style.css",
+    "dev": "npx serve ."
+  },
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}

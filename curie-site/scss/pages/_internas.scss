@@ -1,0 +1,550 @@
+// -----------------------------------------------
+// Páginas internas: produtos, sobre, sustentabilidade
+// -----------------------------------------------
+
+// credito de foto (vale em qualquer secao)
+.credit {
+  font-family: $mono-font;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: rgba($dark, 0.5);
+  margin-top: 0.6rem;
+  text-align: right;
+}
+
+.page-hero {
+  min-height: 70vh;
+  overflow: hidden;
+  text-align: center;
+
+  .bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transform: scale(1.2);
+    z-index: 1;
+
+    .parallax-container {
+      background-size: cover !important;
+      background-position: center !important;
+      transform-origin: top;
+    }
+  }
+
+  .page-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 12rem 2rem 6rem;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 9vw, 8rem);
+    font-weight: 500;
+    color: $soft;
+    line-height: 1;
+  }
+
+  p.paragraph {
+    color: rgba($soft, 0.9);
+    max-width: 40rem;
+    margin: 1.5rem auto 0;
+    line-height: 1.9;
+  }
+
+  p.p-one {
+    color: $decor;
+  }
+}
+
+// bloco de texto + imagem alternados
+.story {
+  min-height: auto;
+  padding: 8rem 0;
+  background-color: $soft;
+
+  &.alt {
+    background-color: $white;
+  }
+
+  .story__grid {
+    align-items: center;
+    gap: 5rem;
+
+    @media only screen and (max-width: 1060px) {
+      flex-direction: column;
+      padding: 0 2rem;
+      gap: 2.5rem;
+    }
+  }
+
+  .story__text {
+    flex: 1;
+
+    h2 {
+      font-family: $can-font;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1.2;
+      color: $color;
+      margin: 0.8rem 0 2rem;
+    }
+
+    p.paragraph {
+      line-height: 2;
+      color: rgba($dark, 0.85);
+      margin-bottom: 1.2rem;
+    }
+
+    blockquote {
+      border-left: 2px solid $color;
+      padding-left: 1.5rem;
+      margin-top: 2rem;
+      font-family: $can-font;
+      font-style: italic;
+      font-size: $a-font;
+      line-height: 1.8;
+      color: $dark;
+    }
+  }
+
+  .story__pic {
+    flex: 0 0 44%;
+    max-width: 44%;
+    position: relative;
+
+    @media only screen and (max-width: 1060px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .img-box {
+      height: 34rem;
+      overflow: hidden;
+
+      @media only screen and (max-width: 1060px) {
+        height: 24rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+
+    .credit {
+      font-family: $mono-font;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      color: rgba($dark, 0.5);
+      margin-top: 0.6rem;
+      text-align: right;
+    }
+  }
+}
+
+// catálogo
+.catalog {
+  min-height: auto;
+  padding: 5rem 0 8rem;
+  background-color: $soft;
+}
+
+.catalog__filters {
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid $line;
+
+  a {
+    font-family: $mono-font;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid transparent;
+    color: rgba($dark, 0.7);
+    cursor: pointer;
+
+    &:hover {
+      color: $color;
+    }
+
+    &.active {
+      border-color: $color;
+      color: $color;
+    }
+  }
+}
+
+// selos / princípios
+.seals {
+  padding: 6rem 0;
+  background-color: $white;
+  min-height: auto;
+  text-align: center;
+
+  .seals__grid {
+    justify-content: center;
+    gap: 3.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+
+    // caixa igual para todos e a arte se ajusta dentro: os selos tem
+    // formatos diferentes e sem isso um fica maior que o outro
+    img {
+      width: 8rem;
+      height: 5rem;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .principles-box {
+    max-width: 55rem;
+    margin: 3rem auto 0;
+    background-color: $soft;
+    padding: 3rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// linha do tempo dos prêmios
+.timeline {
+  padding: 8rem 0;
+  min-height: auto;
+  // a galeria entrou em branco antes desta seção: o creme retoma a alternância
+  background-color: $soft;
+
+  .timeline__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+
+    @media only screen and (max-width: 1060px) {
+      grid-template-columns: 1fr;
+      padding: 0 2rem;
+    }
+  }
+
+  .timeline__item {
+    border-top: 1px solid $line;
+    padding: 2rem 0;
+
+    .row {
+      align-items: baseline;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+
+    .year {
+      font-family: $can-font;
+      font-size: $h4-font;
+      color: $color;
+    }
+
+    .badge {
+      font-family: $mono-font;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background-color: $decor;
+      color: $strong;
+      padding: 0.3rem 0.8rem;
+    }
+
+    h3 {
+      font-family: $can-font;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin: 1rem 0 0.8rem;
+      line-height: 1.3;
+    }
+
+    p {
+      line-height: 1.9;
+      color: rgba($dark, 0.8);
+    }
+  }
+}
+
+// parceiros
+.partners {
+  padding: 6rem 0;
+  min-height: auto;
+  background-color: $soft;
+  text-align: center;
+
+  .partners__logos {
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+
+    img {
+      max-width: 34rem;
+      width: 100%;
+      height: auto;
+    }
+
+    img.small {
+      max-width: 12rem;
+    }
+  }
+}
+
+// comunidades parceiras
+.communities {
+  padding: 8rem 0;
+  min-height: auto;
+  background-color: $white;
+
+  .communities__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+
+    @media only screen and (max-width: 1060px) {
+      grid-template-columns: 1fr;
+      padding: 0 2rem;
+    }
+  }
+
+  .community {
+    border: 1px solid $line;
+    padding: 2rem;
+
+    strong {
+      display: block;
+      font-family: $can-font;
+      font-size: $a-font;
+      font-weight: 500;
+      color: $dark;
+      letter-spacing: 1px;
+    }
+
+    span {
+      font-family: $mono-font;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: $color;
+    }
+  }
+}
+
+// lista de benefícios (logística reversa)
+.benefits {
+  padding: 8rem 0;
+  min-height: auto;
+  background-color: $soft;
+
+  .benefits__grid {
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 3rem;
+
+    @media only screen and (max-width: 1060px) {
+      flex-direction: column;
+      padding: 0 2rem;
+      gap: 2rem;
+    }
+  }
+
+  ul {
+    flex: 1;
+
+    li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1.2rem;
+      line-height: 1.9;
+      font-family: $pop-font;
+      color: rgba($dark, 0.85);
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: $color;
+      }
+    }
+  }
+
+  .selo {
+    flex: 0 0 18rem;
+    max-width: 18rem;
+
+    @media only screen and (max-width: 1060px) {
+      margin: 0 auto;
+    }
+  }
+}
+
+// CTA final das internas
+.cta {
+  min-height: 60vh;
+  background-color: $color;
+  text-align: center;
+  padding: 6rem 2rem;
+
+  h2 {
+    font-family: $can-font;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 500;
+    color: $soft;
+    line-height: 1.2;
+  }
+
+  p.paragraph {
+    color: rgba($soft, 0.85);
+    max-width: 38rem;
+    margin: 1.5rem auto 3rem;
+    line-height: 1.9;
+  }
+
+  a.btn {
+    width: 16rem;
+    height: 4rem;
+    background-color: $decor;
+    margin: 0 auto;
+  }
+}
+
+// foto das comunidades acompanha o mesmo enquadramento das demais
+.communities .story__pic .img-box {
+  height: 26rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 20rem;
+  }
+}
+
+// galeria de fotos reais do time
+.gallery {
+  padding: 6rem 0 8rem;
+  min-height: auto;
+  background-color: $white;
+  text-align: center;
+
+  > .container > .paragraph:not(.p-one) {
+    max-width: 44rem;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: rgba($dark, 0.8);
+  }
+
+  .gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .gallery__item {
+    margin: 0;
+
+    .img-box {
+      height: 22rem;
+      overflow: hidden;
+      background-color: $soft;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+    }
+
+    &:hover .img-box img {
+      transform: scale(1.05);
+    }
+
+    figcaption {
+      font-family: $mono-font;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba($dark, 0.6);
+      margin-top: 0.9rem;
+      text-align: left;
+    }
+  }
+}
+
+// -----------------------------------------------
+// Cabeçalho de seção das páginas internas
+// O .lines-title só recebia estilo dentro de .lines/.featured;
+// aqui ele ganha a mesma escala dos outros títulos das internas
+// e o alinhamento acompanha o da seção.
+// -----------------------------------------------
+.timeline,
+.partners,
+.seals,
+.benefits,
+.catalog,
+.gallery {
+  .lines-title {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    color: $color;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0.8rem 0 1.5rem;
+  }
+
+  .paragraph.p-one {
+    display: block;
+  }
+}
+
+// seções centralizadas: título e texto de abertura acompanham
+.timeline,
+.partners,
+.seals,
+.gallery {
+  > .container > .p-one,
+  > .container > .lines-title,
+  > .container > .paragraph {
+    text-align: center;
+    max-width: 48rem;
+    // sem isso a caixa de 48rem encosta na esquerda e o texto
+    // fica centralizado dentro dela, nao na secao
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  > .container > .lines-title {
+    max-width: 100%;
+  }
+}
+
+// a grade da linha do tempo volta a ser alinhada à esquerda
+.timeline .timeline__grid,
+.timeline .timeline__item {
+  text-align: left;
+}
+
+// seções alinhadas à esquerda
+.benefits > .container > .lines-title {
+  text-align: left;
+}

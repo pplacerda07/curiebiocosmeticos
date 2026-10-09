@@ -1,0 +1,86 @@
+// ---------------------------------------------
+// Curie Biocosméticos — base
+// Identidade visual nova (brandguide 2026)
+// ---------------------------------------------
+
+@font-face {
+  font-family: "canela";
+  src: url(../fonts/canela.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "chilton";
+  src: url(../fonts/chilton-extralight.woff2) format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "chilton";
+  src: url(../fonts/chilton-light.woff2) format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "chilton";
+  src: url(../fonts/chilton-regular.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "chilton";
+  src: url(../fonts/chilton-medium.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "analog";
+  src: url(../fonts/analog-typewriter.woff2) format("woff2");
+  font-display: swap;
+}
+
+// root
+
+// font-size
+$h1-font: 13vw;
+$res-h1-font: clamp(60px, 21vw, 120px);
+$h2-font: 7rem;
+$h3-font: clamp(20px, 10vw, 60px);
+$h4-font: 2rem;
+$h5-font: 6rem;
+$h6-font: 2.5rem;
+$a-font: 1.2rem;
+$small-font: 1rem;
+// font-families
+$pop-font: "chilton", Georgia, serif;
+$can-font: "canela";
+$mono-font: "analog", "Courier New", monospace;
+
+//  colors — paleta da nova identidade
+$color: #602b0d; // marrom Curie (principal)
+$dark: #232323; // carvão
+$soft: #f1f2eb; // off-white (fundo)
+$decor: #e7ea98; // verde-limão (apoio)
+$line: #d4c7bb; // hairline
+$strong: #3d1b08; // marrom escuro
+$white: #ffffff;
+$black: #232323;
+
+// body
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  overscroll-behavior: none;
+  font-family: "canela";
+  background-color: $soft;
+  color: $dark;
+}

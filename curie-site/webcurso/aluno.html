@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área do aluno | Escola Curie</title>
+    <link rel="icon" href="/icons/simbolo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/webcurso/css/app.css" />
+  </head>
+  <!-- PROTÓTIPO VISUAL: dados de exemplo -->
+  <body class="app" data-tela="aluno">
+    <main class="conteudo">
+      <div class="conteudo__cabeca">
+        <div>
+          <p class="rotulo">Turma 01 · Cosmetologia Natural Aplicada</p>
+          <h1>Bom te ver, Marina</h1>
+        </div>
+        <div class="metrica metrica--destaque" style="min-width: 15rem">
+          <span>Próxima entrega</span>
+          <strong style="font-size: 1.4rem">Ficha do sérum</strong>
+          <span>até sexta, 18h</span>
+        </div>
+      </div>
+
+      <!-- continuar -->
+      <section class="bloco">
+        <div class="continuar">
+          <div class="continuar__capa">
+            <img src="/images/hero-product-serum.jpg" alt="Aula em andamento" />
+          </div>
+          <div class="continuar__corpo">
+            <p class="rotulo">Continue de onde parou</p>
+            <h3>Fase A, B e C: ordem, temperatura e cisalhamento</h3>
+            <p>Módulo 03 · Emulsões e sistemas emulsionantes · aula 2 de 7</p>
+            <div style="margin-top: 1.2rem">
+              <div class="barra"><span style="width: 38%"></span></div>
+              <div class="barra-legenda">
+                <span>11:20 de 29:55</span>
+                <span>38%</span>
+              </div>
+            </div>
+            <div class="continuar__acoes">
+              <a href="/webcurso/aula.html" class="btn btn-principal">Retomar aula</a>
+              <a href="/webcurso/laboratorio.html" class="btn btn-fantasma btn-pequeno">
+                Abrir calculadora
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- métricas -->
+      <section class="bloco">
+        <div class="metricas">
+          <div class="metrica">
+            <span>Aulas concluídas</span>
+            <strong>42<em style="font-size: 1rem; color: var(--texto-fraco)">/68</em></strong>
+            <div class="barra barra--fina"><span style="width: 62%"></span></div>
+          </div>
+          <div class="metrica">
+            <span>Horas de estudo</span>
+            <strong>19h40</strong>
+            <span>+3h20 esta semana</span>
+          </div>
+          <div class="metrica">
+            <span>Formulações feitas</span>
+            <strong>6</strong>
+            <span>de 14 previstas</span>
+          </div>
+          <div class="metrica">
+            <span>Ofensiva</span>
+            <strong>9 dias</strong>
+            <span>seu recorde: 14</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ao vivo -->
+      <section class="bloco">
+        <div class="ao-vivo">
+          <div class="ao-vivo__data">
+            <strong>12</strong>
+            <span>mai</span>
+          </div>
+          <div class="ao-vivo__texto">
+            <span class="pulso">Mentoria ao vivo</span>
+            <h3>Correção de fórmulas: traga a sua</h3>
+            <p>
+              Terça, 19h30 · 90 minutos com a Dra. Daniely · gravação liberada
+              em 24h
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.8rem; flex-wrap: wrap">
+            <a href="/webcurso/comunidade.html#mentorias" class="btn btn-limao btn-pequeno">
+              Confirmar presença
+            </a>
+            <a href="/webcurso/comunidade.html#mentorias" class="btn btn-fantasma btn-pequeno" style="border-color: rgba(241,242,235,.3); color: rgba(241,242,235,.8)">
+              Enviar pergunta
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- trilha -->
+      <section class="bloco">
+        <div class="bloco__cabeca">
+          <h3>Sua trilha</h3>
+          <a href="/webcurso/aula.html">ver todos os módulos</a>
+        </div>
+        <div class="modulos-grade">
+          <article class="cartao-modulo">
+            <div class="cartao-modulo__topo">
+              <span class="rotulo-fraco">Módulo 01</span>
+              <span class="tag tag-limao">concluído</span>
+            </div>
+            <h4>Fundamentos: pele, fio e barreira</h4>
+            <p>6 aulas · 2h40</p>
+            <div class="barra"><span style="width: 100%"></span></div>
+          </article>
+
+          <article class="cartao-modulo">
+            <div class="cartao-modulo__topo">
+              <span class="rotulo-fraco">Módulo 02</span>
+              <span class="tag tag-limao">concluído</span>
+            </div>
+            <h4>Ativos do Cerrado e do Pantanal</h4>
+            <p>8 aulas · 3h55</p>
+            <div class="barra"><span style="width: 100%"></span></div>
+          </article>
+
+          <article class="cartao-modulo" style="border-color: var(--marrom)">
+            <div class="cartao-modulo__topo">
+              <span class="rotulo-fraco">Módulo 03</span>
+              <span class="tag tag-marrom">em andamento</span>
+            </div>
+            <h4>Emulsões e sistemas emulsionantes</h4>
+            <p>7 aulas · 3h20 · você está na aula 2</p>
+            <div class="barra"><span style="width: 28%"></span></div>
+          </article>
+
+          <article class="cartao-modulo">
+            <div class="cartao-modulo__topo">
+              <span class="rotulo-fraco">Módulo 04</span>
+              <span class="tag">a seguir</span>
+            </div>
+            <h4>Conservação, segurança e microbiologia</h4>
+            <p>6 aulas · 2h50</p>
+            <div class="barra"><span style="width: 0%"></span></div>
+          </article>
+
+          <article class="cartao-modulo cartao-modulo--bloqueado">
+            <div class="cartao-modulo__topo">
+              <span class="rotulo-fraco">Módulo 05</span>
+              <span class="tag">abre em 7 dias</span>
+            </div>
+            <h4>Linha capilar sólida (waterless)</h4>
+            <p>8 aulas · 4h10</p>
+            <div class="barra"><span style="width: 0%"></span></div>
+          </article>
+
+          <article class="cartao-modulo cartao-modulo--bloqueado">
+            <div class="cartao-modulo__topo">
+              <span class="rotulo-fraco">Módulo 06</span>
+              <span class="tag">abre em 14 dias</span>
+            </div>
+            <h4>Séruns, óleos faciais e nanotecnologia</h4>
+            <p>7 aulas · 3h30</p>
+            <div class="barra"><span style="width: 0%"></span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- progresso + conquistas -->
+      <section class="bloco">
+        <div class="bloco__cabeca">
+          <h3>Suas conquistas</h3>
+          <a href="/webcurso/certificado.html">ver certificado</a>
+        </div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 20rem 1fr;
+            gap: 1.5rem;
+            align-items: stretch;
+          "
+          class="conquistas-area"
+        >
+          <div
+            class="metrica"
+            style="display: flex; align-items: center; gap: 1.5rem"
+          >
+            <div class="anel">
+              <svg viewBox="0 0 100 100">
+                <circle class="trilho" cx="50" cy="50" r="44"></circle>
+                <circle
+                  class="valor"
+                  cx="50"
+                  cy="50"
+                  r="44"
+                  stroke-dasharray="276"
+                  stroke-dashoffset="105"
+                ></circle>
+              </svg>
+              <b>62%</b>
+            </div>
+            <div>
+              <span>Progresso geral</span>
+              <p style="font-size: 0.85rem; margin-top: 0.4rem">
+                Faltam 26 aulas para liberar a avaliação final.
+              </p>
+            </div>
+          </div>
+
+          <div class="conquistas">
+            <div class="conquista">
+              <div class="conquista__selo">
+                <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l2.4 5 5.6.8-4 3.9 1 5.5-5-2.7-5 2.7 1-5.5-4-3.9 5.6-.8z"/></svg>
+              </div>
+              <span>Primeira<br />formulação</span>
+            </div>
+            <div class="conquista">
+              <div class="conquista__selo">
+                <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 12l5 5 9-9"/></svg>
+              </div>
+              <span>Módulo 01<br />completo</span>
+            </div>
+            <div class="conquista">
+              <div class="conquista__selo">
+                <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 4v16M4 12h16"/></svg>
+              </div>
+              <span>10 perguntas<br />no fórum</span>
+            </div>
+            <div class="conquista">
+              <div class="conquista__selo">
+                <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3s5 5 5 10a5 5 0 0 1-10 0c0-2 1-3.5 2-4.5.5 1 1.5 2 1.5 4 0-4 1.5-6.5 1.5-9.5z"/></svg>
+              </div>
+              <span>Ofensiva<br />de 7 dias</span>
+            </div>
+            <div class="conquista conquista--travada">
+              <div class="conquista__selo">
+                <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v9H5z"/></svg>
+              </div>
+              <span>Bancada<br />avançada</span>
+            </div>
+            <div class="conquista conquista--travada">
+              <div class="conquista__selo">
+                <svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v9H5z"/></svg>
+              </div>
+              <span>Curso<br />concluído</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- materiais + avisos -->
+      <section class="bloco">
+        <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.5rem" class="grade-materiais">
+          <div>
+            <div class="bloco__cabeca">
+              <h3>Materiais recentes</h3>
+              <a href="/webcurso/laboratorio.html">biblioteca completa</a>
+            </div>
+            <div class="material">
+              <span class="material__tipo">PDF</span>
+              <div class="material__info">
+                <strong>Ficha de bancada do Sérum ThriHalo</strong>
+                <span>1,2 MB · atualizado há 2 dias</span>
+              </div>
+              <button class="btn btn-fantasma btn-pequeno">Baixar</button>
+            </div>
+            <div class="material">
+              <span class="material__tipo">XLS</span>
+              <div class="material__info">
+                <strong>Planilha de custo por lote</strong>
+                <span>340 KB · módulo 10</span>
+              </div>
+              <button class="btn btn-fantasma btn-pequeno">Baixar</button>
+            </div>
+            <div class="material">
+              <span class="material__tipo">DOC</span>
+              <div class="material__info">
+                <strong>Modelo de dossiê regulatório</strong>
+                <span>820 KB · módulo 09</span>
+              </div>
+              <button class="btn btn-fantasma btn-pequeno">Baixar</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="bloco__cabeca">
+              <h3>Mural da professora</h3>
+            </div>
+            <div class="painel-lateral">
+              <div style="display: flex; gap: 0.9rem; margin-bottom: 1rem">
+                <div class="avatar avatar--marrom">DQ</div>
+                <div>
+                  <strong style="font-size: 0.9rem">Dra. Daniely</strong>
+                  <em class="rotulo-fraco" style="display: block">há 3 horas</em>
+                </div>
+              </div>
+              <p style="font-size: 0.92rem">
+                Turma, subi a ficha corrigida do sérum com a faixa de pH ajustada
+                para 5,0 a 5,5. Quem já tinha baixado, troque o arquivo antes de
+                pesar o lote.
+              </p>
+            </div>
+            <div class="painel-lateral">
+              <div style="display: flex; gap: 0.9rem; margin-bottom: 1rem">
+                <div class="avatar avatar--marrom">DQ</div>
+                <div>
+                  <strong style="font-size: 0.9rem">Dra. Daniely</strong>
+                  <em class="rotulo-fraco" style="display: block">ontem</em>
+                </div>
+              </div>
+              <p style="font-size: 0.92rem">
+                Lembrete: na mentoria de terça vamos corrigir fórmulas ao vivo.
+                Poste a sua no fórum até segunda para entrar na fila.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/webcurso/js/app.js"></script>
+  </body>
+</html>

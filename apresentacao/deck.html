@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Escola Curie · mercado, preço e plataforma</title>
+    <style>
+      @font-face {
+        font-family: "plex";
+        src: url("fonts/ibm-plex-sans.woff2") format("woff2-variations"),
+          url("fonts/ibm-plex-sans.woff2") format("woff2");
+        font-weight: 400 600;
+      }
+
+      :root {
+        --marrom: #602b0d;
+        --marrom-escuro: #3d1b08;
+        --carvao: #232323;
+        --creme: #f1f2eb;
+        --limao: #e7ea98;
+        --branco: #ffffff;
+        --linha: #ddd7cd;
+        --linha-forte: #c0b6a6;
+        --texto: #232323;
+        --texto-2: rgba(35, 35, 35, 0.66);
+        --texto-3: rgba(35, 35, 35, 0.42);
+        --fonte: "plex", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      }
+
+      @page {
+        size: 13.333in 7.5in;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--fonte);
+        color: var(--texto);
+        background: #999;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .slide {
+        width: 13.333in;
+        height: 7.5in;
+        padding: 0.72in 0.9in;
+        background: var(--creme);
+        position: relative;
+        overflow: hidden;
+        page-break-after: always;
+        break-after: page;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .slide:last-child {
+        page-break-after: auto;
+      }
+
+      .slide--escuro {
+        background: var(--carvao);
+        color: var(--creme);
+      }
+
+      .slide--branco {
+        background: var(--branco);
+      }
+
+      .slide--limao {
+        background: var(--limao);
+      }
+
+      /* -------- elementos comuns -------- */
+      .rotulo {
+        font-size: 9.5pt;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--marrom);
+        font-weight: 500;
+        margin-bottom: 0.16in;
+      }
+
+      .slide--escuro .rotulo {
+        color: var(--limao);
+      }
+
+      h1 {
+        font-size: 42pt;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        line-height: 1.04;
+      }
+
+      h2 {
+        font-size: 28pt;
+        font-weight: 600;
+        letter-spacing: -0.022em;
+        line-height: 1.1;
+        color: var(--marrom);
+        margin-bottom: 0.26in;
+      }
+
+      .slide--escuro h2,
+      .slide--escuro h1 {
+        color: var(--creme);
+      }
+
+      h3 {
+        font-size: 14pt;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        margin-bottom: 0.07in;
+      }
+
+      p {
+        font-size: 11.5pt;
+        line-height: 1.55;
+        color: var(--texto-2);
+        max-width: 8.6in;
+      }
+
+      .slide--escuro p {
+        color: rgba(241, 242, 235, 0.72);
+      }
+
+      strong {
+        font-weight: 600;
+        color: var(--texto);
+      }
+
+      .slide--escuro strong {
+        color: var(--creme);
+      }
+
+      .pe {
+        position: absolute;
+        left: 0.9in;
+        right: 0.9in;
+        bottom: 0.38in;
+        display: flex;
+        justify-content: space-between;
+        font-size: 8pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--texto-3);
+        border-top: 1px solid var(--linha);
+        padding-top: 0.13in;
+      }
+
+      .slide--escuro .pe {
+        color: rgba(241, 242, 235, 0.4);
+        border-color: rgba(241, 242, 235, 0.15);
+      }
+
+      .conteudo {
+        flex: 1;
+        min-height: 0;
+      }
+
+      /* -------- capa -------- */
+      .capa {
+        justify-content: center;
+      }
+
+      .capa h1 {
+        font-size: 54pt;
+        max-width: 9.4in;
+        margin: 0.2in 0 0.3in;
+      }
+
+      .capa .sub {
+        font-size: 13.5pt;
+        max-width: 7.6in;
+        line-height: 1.5;
+      }
+
+      .capa__marca {
+        position: absolute;
+        top: 0.72in;
+        left: 0.9in;
+        font-size: 10pt;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--limao);
+        font-weight: 500;
+      }
+
+      .capa__faixa {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 2.1in;
+        background: var(--marrom);
+      }
+
+      .capa__faixa i {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 2.1in;
+        background: var(--limao);
+      }
+
+      /* -------- números -------- */
+      .numeros {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.3in;
+        margin-top: 0.3in;
+      }
+
+      .numero b {
+        display: block;
+        font-size: 40pt;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        color: var(--marrom);
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .slide--escuro .numero b {
+        color: var(--limao);
+      }
+
+      .numero span {
+        display: block;
+        font-size: 9.5pt;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--texto-3);
+        margin-top: 0.1in;
+        line-height: 1.45;
+      }
+
+      .slide--escuro .numero span {
+        color: rgba(241, 242, 235, 0.5);
+      }
+
+      .numero {
+        border-top: 2px solid var(--marrom);
+        padding-top: 0.16in;
+      }
+
+      .slide--escuro .numero {
+        border-color: var(--limao);
+      }
+
+      /* -------- tabela -------- */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10.5pt;
+      }
+
+      th {
+        text-align: left;
+        font-size: 8.5pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--texto-3);
+        font-weight: 500;
+        padding: 0.1in 0.14in;
+        border-bottom: 1.5px solid var(--linha-forte);
+      }
+
+      td {
+        padding: 0.11in 0.14in;
+        border-bottom: 1px solid var(--linha);
+        color: var(--texto-2);
+        vertical-align: top;
+      }
+
+      td:first-child {
+        color: var(--texto);
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .dir {
+        text-align: right;
+      }
+
+      .val {
+        font-variant-numeric: tabular-nums;
+        color: var(--texto);
+        white-space: nowrap;
+      }
+
+      tr.destaque td {
+        background: var(--limao);
+        color: var(--marrom-escuro);
+      }
+
+      tr.destaque td:first-child {
+        color: var(--marrom-escuro);
+      }
+
+      /* -------- barras -------- */
+      .barras {
+        margin-top: 0.22in;
+      }
+
+      .barra {
+        display: grid;
+        grid-template-columns: 2.4in 1fr;
+        align-items: center;
+        gap: 0.16in;
+        padding: 0.09in 0;
+        border-bottom: 1px solid var(--linha);
+      }
+
+      .barra__nome {
+        font-size: 11pt;
+      }
+
+      .barra__nome em {
+        display: block;
+        font-style: normal;
+        font-size: 8pt;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--texto-3);
+      }
+
+      .barra__val {
+        display: flex;
+        align-items: center;
+      }
+
+      .barra__val b {
+        height: 0.14in;
+        background: var(--marrom);
+        display: block;
+      }
+
+      .barra--leve .barra__val b {
+        background: var(--limao);
+        border: 1px solid var(--marrom);
+      }
+
+      .barra__val span {
+        margin-left: 0.12in;
+        font-size: 10pt;
+        font-variant-numeric: tabular-nums;
+        color: var(--texto-2);
+        white-space: nowrap;
+      }
+
+      /* -------- colunas -------- */
+      .colunas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.34in 0.5in;
+        margin-top: 0.2in;
+      }
+
+      .colunas--3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .bloco {
+        border-top: 2px solid var(--marrom);
+        padding-top: 0.14in;
+      }
+
+      .slide--escuro .bloco {
+        border-color: var(--limao);
+      }
+
+      .bloco p {
+        font-size: 10.5pt;
+        line-height: 1.5;
+      }
+
+      .bloco .quem {
+        display: block;
+        font-size: 8.5pt;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--marrom);
+        margin-top: 0.1in;
+      }
+
+      /* -------- lista numerada -------- */
+      .males {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.22in 0.5in;
+        margin-top: 0.18in;
+        counter-reset: m;
+      }
+
+      .males li {
+        list-style: none;
+        counter-increment: m;
+        display: grid;
+        grid-template-columns: 0.34in 1fr;
+        gap: 0.1in;
+      }
+
+      .males li::before {
+        content: counter(m, decimal-leading-zero);
+        font-size: 9pt;
+        color: var(--marrom);
+        font-weight: 600;
+        padding-top: 0.03in;
+      }
+
+      .males h3 {
+        font-size: 12pt;
+      }
+
+      .males p {
+        font-size: 10pt;
+        line-height: 1.45;
+      }
+
+      /* -------- destaque -------- */
+      .frase {
+        font-size: 24pt;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+        max-width: 9.6in;
+        color: var(--texto);
+      }
+
+      .slide--limao .frase,
+      .slide--limao h2 {
+        color: var(--marrom-escuro);
+      }
+
+      .slide--limao p {
+        color: rgba(61, 27, 8, 0.75);
+      }
+
+      .slide--limao .rotulo {
+        color: var(--marrom-escuro);
+      }
+
+      .caixa {
+        border-left: 4px solid var(--marrom);
+        padding: 0.12in 0 0.12in 0.24in;
+        margin-top: 0.26in;
+      }
+
+      .slide--escuro .caixa {
+        border-color: var(--limao);
+      }
+
+      /* -------- escada de preço -------- */
+      .regua {
+        position: relative;
+        height: 0.3in;
+        margin-left: 2.4in;
+        border-bottom: 1px solid var(--linha-forte);
+      }
+
+      .regua i {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: var(--linha);
+      }
+
+      .regua i::after {
+        content: attr(data-v);
+        position: absolute;
+        bottom: 0.03in;
+        left: 3px;
+        font-size: 7.5pt;
+        color: var(--texto-3);
+        white-space: nowrap;
+      }
+
+      .vao {
+        margin-left: 2.4in;
+        margin-top: 0.14in;
+        height: 0.62in;
+        position: relative;
+      }
+
+      .vao div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: var(--limao);
+        border-left: 2px solid var(--marrom);
+        border-right: 2px solid var(--marrom);
+        display: flex;
+        align-items: center;
+        padding: 0 0.12in;
+        font-size: 9pt;
+        line-height: 1.35;
+        color: var(--marrom-escuro);
+      }
+
+      /* -------- nota de preço -------- */
+      .nota {
+        display: flex;
+        height: 0.72in;
+        border: 1px solid var(--linha-forte);
+        margin-top: 0.24in;
+      }
+
+      .nota div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10pt;
+      }
+
+      .nota .fica {
+        background: var(--branco);
+        flex: 1;
+      }
+
+      .nota .taxa {
+        background: var(--marrom);
+        color: var(--creme);
+        width: 10.4%;
+        font-size: 9pt;
+      }
+
+
+      /* -------- faixa de recebimento -------- */
+      .recebimento {
+        margin-top: 0.42in;
+        border-top: 1px solid rgba(241, 242, 235, 0.18);
+        padding-top: 0.26in;
+        display: grid;
+        grid-template-columns: 3.5in 1fr;
+        gap: 0.5in;
+        align-items: start;
+      }
+
+      .recebimento__marca b {
+        display: block;
+        font-size: 9pt;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--limao);
+        margin-bottom: 0.08in;
+      }
+
+      .recebimento__marca strong {
+        display: block;
+        font-size: 24pt;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--creme);
+        line-height: 1;
+        margin-bottom: 0.1in;
+      }
+
+      .recebimento__marca span {
+        font-size: 10pt;
+        line-height: 1.45;
+        color: rgba(241, 242, 235, 0.65);
+        display: block;
+      }
+
+      .recebimento__dados {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.28in;
+      }
+
+      .recebimento__dados div {
+        border-left: 2px solid var(--limao);
+        padding-left: 0.16in;
+      }
+
+      .recebimento__dados b {
+        display: block;
+        font-size: 19pt;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        color: var(--creme);
+        line-height: 1;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .recebimento__dados span {
+        display: block;
+        font-size: 8.5pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(241, 242, 235, 0.5);
+        margin-top: 0.08in;
+        line-height: 1.4;
+      }
+
+      /* -------- fechamento -------- */
+      .passos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.4in;
+        margin-top: 0.34in;
+      }
+
+      .passo b {
+        display: block;
+        font-size: 9pt;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--limao);
+        margin-bottom: 0.12in;
+      }
+
+      .passo h3 {
+        color: var(--creme);
+        font-size: 15pt;
+        margin-bottom: 0.1in;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 01 CAPA -->
+    <section class="slide slide--escuro capa">
+      <div class="capa__faixa"><i></i></div>
+      <span class="capa__marca">Curie Biocosméticos</span>
+      <div style="max-width: 9.6in">
+        <p class="rotulo">Escola de biocosmética · estudo de viabilidade</p>
+        <h1>Mercado, preço e plataforma</h1>
+        <p class="sub">
+          Onze concorrentes levantados, a posição de preço definida em R$ 497 e
+          quanto custa entregar o curso dentro de uma plataforma pronta.
+        </p>
+      </div>
+      <div class="pe">
+        <span>Setembro de 2026</span>
+        <span>Confidencial · uso interno</span>
+      </div>
+    </section>
+
+    <!-- 02 MERCADO -->
+    <section class="slide">
+      <div class="conteudo">
+        <p class="rotulo">O tamanho da piscina</p>
+        <h2>O Brasil é o terceiro maior mercado de beleza do mundo</h2>
+        <p>
+          Atrás apenas de Estados Unidos e China, com 43,4% de tudo que a
+          América Latina consome na categoria. Isso sustenta duas demandas: quem
+          quer entrar no setor com marca própria e quem já está e precisa de
+          método.
+        </p>
+        <div class="numeros">
+          <div class="numero">
+            <b>R$ 200 bi</b><span>faturamento do setor em 2025</span>
+          </div>
+          <div class="numero"><b>3º</b><span>maior mercado consumidor</span></div>
+          <div class="numero"><b>+7%</b><span>ao ano projetado até 2027</span></div>
+          <div class="numero"><b>7.359</b><span>lançamentos de produto em 2025</span></div>
+        </div>
+      </div>
+      <div class="pe">
+        <span>Fonte: ABIHPEC e Euromonitor International</span><span>02</span>
+      </div>
+    </section>
+
+    <!-- 03 CONCORRENTES -->
+    <section class="slide slide--branco">
+      <div class="conteudo">
+        <p class="rotulo">Quem já ensina cosmética natural no Brasil</p>
+        <h2>Onze players, do infoproduto à pós-graduação</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Preço</th>
+              <th>Formato</th>
+              <th>Autoridade de quem ensina</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Artemísia</td>
+              <td class="val">R$ 224</td>
+              <td>8 módulos, 80 receitas, suporte por WhatsApp</td>
+              <td>marca de conteúdo</td>
+            </tr>
+            <tr>
+              <td>Bandeira Branca</td>
+              <td class="val">R$ 450</td>
+              <td>presencial, 3 dias, biodiversidade brasileira</td>
+              <td>artesanal e territorial</td>
+            </tr>
+            <tr>
+              <td>LabRitual</td>
+              <td class="val">não publica</td>
+              <td>120 ingredientes, 70 formulações, módulo ANVISA</td>
+              <td>escola de formulação</td>
+            </tr>
+            <tr>
+              <td>Nature Pro</td>
+              <td class="val">não publica</td>
+              <td>65h, 60 produtos, marca e precificação</td>
+              <td>selo MEC via faculdade parceira</td>
+            </tr>
+            <tr>
+              <td>Escola Vinia</td>
+              <td class="val">R$ 1.999</td>
+              <td>8 módulos, 12h37, fórum com tutor</td>
+              <td>químico, consultor in-cosmetics</td>
+            </tr>
+            <tr>
+              <td>Ewé Alquimias</td>
+              <td class="val">R$ 2.497</td>
+              <td>9 módulos e 6 mentorias ao vivo</td>
+              <td>farmacêutica e fitoaromaterapeuta</td>
+            </tr>
+            <tr>
+              <td>Instituto Racine</td>
+              <td class="val">R$ 5.299</td>
+              <td>132h em 10 meses, com dois encontros presenciais</td>
+              <td>35 anos de P&amp;D em multinacional</td>
+            </tr>
+            <tr>
+              <td>Unyleya</td>
+              <td class="val">não publica</td>
+              <td>pós lato sensu, 360h, exige graduação</td>
+              <td>instituição credenciada pelo MEC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pe">
+        <span>Preços coletados nas páginas públicas em setembro de 2026</span><span>03</span>
+      </div>
+    </section>
+
+    <!-- 04 ESCADA -->
+    <section class="slide">
+      <div class="conteudo">
+        <p class="rotulo">A escada de preços</p>
+        <h2>Entre R$ 450 e R$ 1.999 não existe ninguém</h2>
+        <div class="barras">
+          <div class="regua">
+            <i style="left: 0" data-v="R$ 0"></i>
+            <i style="left: 18.2%" data-v="1.000"></i>
+            <i style="left: 36.4%" data-v="2.000"></i>
+            <i style="left: 54.5%" data-v="3.000"></i>
+            <i style="left: 72.7%" data-v="4.000"></i>
+            <i style="left: 90.9%" data-v="5.000"></i>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">Artemísia<em>receitas caseiras</em></div>
+            <div class="barra__val"><b style="width: 4.1%"></b><span>R$ 224</span></div>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">Bandeira Branca<em>presencial</em></div>
+            <div class="barra__val"><b style="width: 8.2%"></b><span>R$ 450</span></div>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">Escola Vinia<em>químico</em></div>
+            <div class="barra__val"><b style="width: 36.3%"></b><span>R$ 1.999</span></div>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">Ewé Alquimias<em>curso e mentoria</em></div>
+            <div class="barra__val"><b style="width: 45.4%"></b><span>R$ 2.497</span></div>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">Instituto Racine<em>132h, industrial</em></div>
+            <div class="barra__val"><b style="width: 96.3%"></b><span>R$ 5.299</span></div>
+          </div>
+          <div class="vao">
+            <div style="left: 8.2%; width: 28.1%">
+              Vão sem concorrente<br /><strong>Curie entra aqui, a R$ 497</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pe">
+        <span>Escala linear de R$ 0 a R$ 5.500</span><span>04</span>
+      </div>
+    </section>
+
+    <!-- 05 TERRITÓRIOS -->
+    <section class="slide slide--branco">
+      <div class="conteudo">
+        <p class="rotulo">Como o mercado se organiza</p>
+        <h2>Quatro territórios que quase não conversam</h2>
+        <div class="colunas">
+          <div class="bloco">
+            <h3>A artesã</h3>
+            <p>
+              Ensina receita e prática caseira. Promete economia doméstica e
+              renda extra. Preço baixo, volume alto, entrega em vídeo e PDF.
+            </p>
+            <span class="quem">Artemísia · Bandeira Branca</span>
+          </div>
+          <div class="bloco">
+            <h3>A escola de formulação</h3>
+            <p>
+              Ensina método: ingredientes, fases, estabilidade, ANVISA, marca. É
+              o território mais disputado e o mais parecido entre si.
+            </p>
+            <span class="quem">LabRitual · Nature Pro · Ewé · Vinia</span>
+          </div>
+          <div class="bloco">
+            <h3>A indústria</h3>
+            <p>
+              Forma quem já é farmacêutico ou químico para P&amp;D de empresa.
+              Carga horária longa, preço alto, docente de multinacional.
+            </p>
+            <span class="quem">Racine · Senac</span>
+          </div>
+          <div class="bloco">
+            <h3>A academia</h3>
+            <p>
+              Pós-graduação com selo MEC. Vende diploma e progressão de carreira,
+              não capacidade de lançar produto. Exige graduação.
+            </p>
+            <span class="quem">Unyleya · Faculdade Brasília</span>
+          </div>
+        </div>
+      </div>
+      <div class="pe"><span>Escola Curie</span><span>05</span></div>
+    </section>
+
+    <!-- 06 O VAZIO -->
+    <section class="slide slide--limao">
+      <div class="conteudo" style="display: flex; flex-direction: column; justify-content: center">
+        <p class="rotulo">O achado da pesquisa</p>
+        <p class="frase">
+          Não existe, no Brasil, um curso que ensine a formular com os ativos do
+          Cerrado e do Pantanal. Procuramos. O que a busca devolve é a própria
+          Curie, em matéria de jornal sobre a pesquisa da Daniely.
+        </p>
+        <p style="margin-top: 0.3in; max-width: 9.2in">
+          As concorrentes são <strong>ou</strong> artesãs e aromaterapeutas
+          <strong>ou</strong> químicos de indústria. Doutora pelo IQSC da USP com
+          marca na prateleira, prêmios de inovação e contrato com comunidades
+          extrativistas é um quinto território, não uma variação dos quatro.
+        </p>
+      </div>
+      <div class="pe"><span>Escola Curie</span><span>06</span></div>
+    </section>
+
+    <!-- 07 PADRÃO x NOSSO -->
+    <section class="slide">
+      <div class="conteudo">
+        <p class="rotulo">Comparação item a item</p>
+        <h2>O que é padrão de mercado e o que seria só nosso</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>No mercado</th>
+              <th>Na Escola Curie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Formulações com ficha técnica</td><td>padrão</td><td>sim</td></tr>
+            <tr><td>Módulo de ANVISA e rotulagem</td><td>padrão</td><td>sim</td></tr>
+            <tr><td>Guia de fornecedores</td><td>padrão</td><td>sim</td></tr>
+            <tr><td>Comunidade e mentoria ao vivo</td><td>Ewé, LabRitual</td><td>sim</td></tr>
+            <tr><td>Certificado</td><td>padrão</td><td>sim</td></tr>
+            <tr class="destaque"><td>Biblioteca de ativos nativos</td><td>ninguém tem</td><td>só a Curie</td></tr>
+            <tr class="destaque"><td>Calculadora de formulação</td><td>ninguém tem</td><td>só a Curie</td></tr>
+            <tr class="destaque"><td>Caderno de bancada</td><td>ninguém tem</td><td>só a Curie</td></tr>
+            <tr class="destaque"><td>Cadeia de coleta comunitária</td><td>ninguém tem</td><td>só a Curie</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pe"><span>Escola Curie</span><span>07</span></div>
+    </section>
+
+    <!-- 08 PREÇO -->
+    <section class="slide slide--branco">
+      <div class="conteudo">
+        <p class="rotulo">Posição de preço</p>
+        <h2>R$ 497, com parcela de R$ 49,70</h2>
+        <p>
+          Valor de decisão rápida, dentro do vão que nenhum concorrente ocupa. O
+          que esse preço cobra é volume: a mesma receita de 53 alunas a R$ 1.890
+          exige 202 alunas a R$ 497.
+        </p>
+        <div class="numeros" style="grid-template-columns: repeat(3, 1fr)">
+          <div class="numero">
+            <b>202</b><span>alunas para R$ 100 mil de receita bruta</span>
+          </div>
+          <div class="numero">
+            <b>R$ 49,70</b><span>parcela em 12 vezes</span>
+          </div>
+          <div class="numero">
+            <b>4x</b><span>mais alunas que no preço da concorrência direta</span>
+          </div>
+        </div>
+        <div class="caixa">
+          <p>
+            <strong>O risco a administrar:</strong> preço baixo comunica
+            acessível enquanto a assinatura comunica doutora pela USP. A página
+            precisa dizer em voz alta por que está nesse valor, com preço de
+            fundação da turma 01, senão o público técnico desconfia.
+          </p>
+        </div>
+      </div>
+      <div class="pe"><span>Escola Curie</span><span>08</span></div>
+    </section>
+
+    <!-- 09 TAXAS -->
+    <section class="slide">
+      <div class="conteudo">
+        <p class="rotulo">Plataforma pronta</p>
+        <h2>O que cada uma cobra por venda</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Plataforma</th>
+              <th>Taxa por venda</th>
+              <th>Mensalidade</th>
+              <th>Quando você recebe</th>
+              <th class="dir">Sai do R$ 497</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hotmart</td>
+              <td>9,9% mais R$ 2,49</td>
+              <td>zero</td>
+              <td>30 dias</td>
+              <td class="val dir">R$ 51,69</td>
+            </tr>
+            <tr>
+              <td>Kiwify</td>
+              <td>8,99% mais R$ 2,49</td>
+              <td>zero</td>
+              <td>Pix em 2 dias, cartão em 15</td>
+              <td class="val dir">R$ 47,17</td>
+            </tr>
+            <tr>
+              <td>Eduzz venda direta</td>
+              <td>4,9% mais R$ 2,49</td>
+              <td>zero</td>
+              <td>conforme plano</td>
+              <td class="val dir">R$ 26,84</td>
+            </tr>
+            <tr>
+              <td>MemberKit</td>
+              <td>nada por venda</td>
+              <td>R$ 197 a R$ 697</td>
+              <td>depende do checkout</td>
+              <td class="val dir">R$ 15,35</td>
+            </tr>
+            <tr class="destaque">
+              <td>Sistema próprio</td>
+              <td>2,99% mais R$ 0,49</td>
+              <td>cerca de R$ 100</td>
+              <td>conforme o gateway</td>
+              <td class="val dir">R$ 15,35</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="nota">
+          <div class="fica">de cada venda, R$ 445,31 ficam com a Curie</div>
+          <div class="taxa">10,4%</div>
+        </div>
+      </div>
+      <div class="pe">
+        <span>Taxas oficiais verificadas em setembro de 2026</span><span>09</span>
+      </div>
+    </section>
+
+    <!-- 10 CONTA DO ANO -->
+    <section class="slide slide--branco">
+      <div class="conteudo">
+        <p class="rotulo">A conta do ano</p>
+        <h2>Custo anual na turma de 200 alunas</h2>
+        <div class="barras">
+          <div class="barra">
+            <div class="barra__nome">Hotmart<em>9,9% mais fixa</em></div>
+            <div class="barra__val"><b style="width: 100%"></b><span>R$ 10.338</span></div>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">Kiwify<em>8,99% mais fixa</em></div>
+            <div class="barra__val"><b style="width: 91.3%"></b><span>R$ 9.434</span></div>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">MemberKit<em>mais gateway</em></div>
+            <div class="barra__val"><b style="width: 52.6%"></b><span>R$ 5.434</span></div>
+          </div>
+          <div class="barra">
+            <div class="barra__nome">Eduzz<em>venda direta</em></div>
+            <div class="barra__val"><b style="width: 51.9%"></b><span>R$ 5.368</span></div>
+          </div>
+          <div class="barra barra--leve">
+            <div class="barra__nome">Sistema próprio<em>gateway mais infra</em></div>
+            <div class="barra__val"><b style="width: 41.3%"></b><span>R$ 4.270</span></div>
+          </div>
+        </div>
+        <div class="caixa">
+          <p>
+            A Hotmart custa <strong>R$ 6.068 a mais por ano</strong> que um
+            sistema próprio. É o preço de <strong>12 alunas</strong>. Na turma de
+            500, são 34 alunas por ano trabalhando de graça para a plataforma.
+          </p>
+        </div>
+      </div>
+      <div class="pe"><span>Receita bruta de R$ 99.400</span><span>10</span></div>
+    </section>
+
+    <!-- 11 MALEFÍCIOS -->
+    <section class="slide slide--escuro">
+      <div class="conteudo">
+        <p class="rotulo">O custo que não aparece na fatura</p>
+        <h2>O que se perde junto com o dinheiro</h2>
+        <ol class="males">
+          <li>
+            <div>
+              <h3>Você não controla o seu custo</h3>
+              <p>
+                Em setembro de 2026 a Hotmart subiu a taxa fixa de R$ 1,00 para
+                R$ 2,49. Ninguém consultou os produtores.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>A aluna é cliente deles</h3>
+              <p>
+                Progresso, comentários e histórico ficam lá dentro. Migrar
+                significa pedir para a aluna recomeçar em outro lugar.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>A taxa incide sobre o seu tráfego</h3>
+              <p>
+                Você paga o anúncio, traz a venda, e a plataforma leva 10% dela.
+                É pedágio, não comissão.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Seu dinheiro fica preso</h3>
+              <p>
+                Repasse em 30 dias na Hotmart, 15 no cartão da Kiwify.
+                Antecipar custa de 2% a 4,79%.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>A marca da compra não é a sua</h3>
+              <p>
+                Checkout e e-mails saem com a marca da plataforma, o que
+                contradiz um produto que vende origem e rigor.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>As ferramentas não cabem lá</h3>
+              <p>
+                Biblioteca, calculadora e caderno não existem em nenhuma delas.
+                Entrar é aceitar entregar só mais um player de vídeo.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="pe"><span>Escola Curie</span><span>11</span></div>
+    </section>
+
+    <!-- 12 O OUTRO LADO -->
+    <section class="slide">
+      <div class="conteudo">
+        <p class="rotulo">Sendo justo com o outro lado</p>
+        <h2>Onde a plataforma ganha da gente</h2>
+        <p style="max-width: 9.4in">
+          Pelos 10% elas entregam checkout antifraude, parcelamento em 12 vezes
+          com o risco financeiro por conta delas, emissão fiscal, disputa de
+          chargeback e zero custo fixo. Para uma primeira turma de 40 ou 50
+          alunas, plataforma pronta é a escolha certa: desenvolver não se paga.
+        </p>
+        <div class="numeros" style="grid-template-columns: repeat(3, 1fr)">
+          <div class="numero">
+            <b>R$ 36,34</b><span>economizados por venda fora da Hotmart</span>
+          </div>
+          <div class="numero">
+            <b>830</b><span>vendas para pagar um desenvolvimento de R$ 30 mil</span>
+          </div>
+          <div class="numero">
+            <b>410</b><span>vendas se o desenvolvimento ficar em R$ 15 mil</span>
+          </div>
+        </div>
+        <div class="caixa">
+          <p>
+            A conta só vira com volume. Abaixo de 300 alunas por ano, a
+            plataforma pronta sai mais barata do que manter sistema próprio.
+          </p>
+        </div>
+      </div>
+      <div class="pe"><span>Escola Curie</span><span>12</span></div>
+    </section>
+
+    <!-- 13 RECOMENDAÇÃO -->
+    <section class="slide slide--escuro">
+      <div class="conteudo">
+        <p class="rotulo">O caminho que a conta aponta</p>
+        <h2>Híbrido, nesta ordem</h2>
+        <div class="passos">
+          <div class="passo">
+            <b>Primeiro</b>
+            <h3>Turma 01 na plataforma pronta</h3>
+            <p>
+              Eduzz ou Kiwify, não Hotmart, a menos que o plano use afiliados. A
+              Eduzz cobra metade na venda direta, que é o caso da Curie: tráfego
+              próprio, lista própria. Zero custo fixo para validar.
+            </p>
+          </div>
+          <div class="passo">
+            <b>Ao mesmo tempo</b>
+            <h3>As três ferramentas fora dela</h3>
+            <p>
+              Biblioteca, calculadora e caderno em domínio da Curie, com a aluna
+              entrando pelo mesmo login. É o que diferencia o produto e o que
+              justifica o preço.
+            </p>
+          </div>
+          <div class="passo">
+            <b>Depois de 300 alunas</b>
+            <h3>Trazer o resto para casa</h3>
+            <p>
+              A essa altura a economia de taxa paga o desenvolvimento, e o que já
+              existe de ferramenta própria vira a base do sistema completo.
+            </p>
+          </div>
+        </div>
+        <div class="recebimento">
+          <div class="recebimento__marca">
+            <b>Por onde vamos receber</b>
+            <strong>Asaas</strong>
+            <span>
+              Conta digital com nota fiscal automática, o que a concorrente
+              direta não faz. Checkout próprio, no domínio da Curie.
+            </span>
+          </div>
+          <div class="recebimento__dados">
+            <div><b>R$ 1,99</b><span>por venda no Pix</span></div>
+            <div><b>3,99%</b><span>no cartão em 12 vezes</span></div>
+            <div><b>R$ 0,49</b><span>por nota fiscal emitida</span></div>
+            <div><b>1,25%</b><span>ao mês para antecipar o cartão</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pe">
+        <span>Migrar nessa ordem custa menos que sair depois de três turmas</span><span>13</span>
+      </div>
+    </section>
+
+    <!-- 14 FECHAMENTO -->
+    <section class="slide slide--limao capa">
+      <div style="max-width: 9.6in">
+        <p class="rotulo">Próximos passos</p>
+        <h1 style="font-size: 38pt; color: var(--marrom-escuro); margin: 0.16in 0 0.3in">
+          Validar conteúdo, abrir carrinho, medir a turma 01
+        </h1>
+        <div class="colunas colunas--3" style="margin-top: 0.1in">
+          <div class="bloco" style="border-color: var(--marrom-escuro)">
+            <h3>Conteúdo</h3>
+            <p>
+              Revisar com a Daniely as fichas técnicas dos ativos e as questões
+              da avaliação, que são o que não pode sair errado.
+            </p>
+          </div>
+          <div class="bloco" style="border-color: var(--marrom-escuro)">
+            <h3>Comercial</h3>
+            <p>
+              Fechar a conta com a plataforma escolhida, definir a data de
+              abertura e escrever a justificativa do preço de fundação.
+            </p>
+          </div>
+          <div class="bloco" style="border-color: var(--marrom-escuro)">
+            <h3>Produto</h3>
+            <p>
+              Tirar as três ferramentas do protótipo e colocá-las em pé, em
+              domínio próprio, antes da primeira aula.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pe" style="border-color: rgba(61, 27, 8, 0.25); color: rgba(61, 27, 8, 0.6)">
+        <span>Curie Biocosméticos · Escola de biocosmética</span>
+        <span>Setembro de 2026</span>
+      </div>
+    </section>
+  </body>
+</html>

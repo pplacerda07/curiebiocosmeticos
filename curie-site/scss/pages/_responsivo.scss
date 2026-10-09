@@ -1,0 +1,825 @@
+// -----------------------------------------------
+// Responsivo
+// Todas as regras de tablet e celular ficam aqui.
+// Breakpoints: 1200 / 1060 (tablet) / 768 (celular) / 480 (celular pequeno)
+// -----------------------------------------------
+
+// altura de tela que respeita a barra do navegador no celular
+@media only screen and (max-width: 1060px) {
+  @supports (height: 100svh) {
+    .section {
+      min-height: 100svh;
+    }
+  }
+}
+
+// ================= LAPTOP PEQUENO =================
+@media only screen and (max-width: 1200px) {
+  .container,
+  .mini-container {
+    padding: 0 2.5rem;
+  }
+
+  .title-2 {
+    font-size: 6.5vw;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// ================= TABLET (2 colunas de produto) =================
+@media only screen and (max-width: 1060px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// ================= TABLET =================
+@media only screen and (max-width: 1060px) {
+  .pad-section {
+    padding: 7rem 0;
+  }
+
+  .logo-btn img {
+    width: 7rem;
+  }
+
+  .about .container .text-box {
+    line-height: 1.6;
+  }
+
+  .lines .container,
+  .featured .container,
+  .reviews .container {
+    padding: 0 2rem;
+  }
+
+  .line-card .img-box {
+    height: 24rem;
+  }
+
+  .story .story__pic .img-box {
+    height: 26rem;
+  }
+
+  .seals .seals__grid {
+    gap: 2.5rem;
+
+    img {
+      width: 6.5rem;
+      height: 4.2rem;
+    }
+  }
+
+  .partners .partners__logos {
+    gap: 2.5rem;
+  }
+
+  .oth .mini-container .oth-content {
+    padding: 0;
+  }
+
+  .drawer {
+    width: 26rem;
+  }
+}
+
+// ================= CELULAR =================
+@media only screen and (max-width: 768px) {
+  // ---------- tipografia ----------
+  .title {
+    font-size: 20vw;
+    letter-spacing: 4px;
+  }
+
+  .title-2 {
+    font-size: clamp(2rem, 8.5vw, 3.4rem);
+  }
+
+  .title-3 {
+    font-size: clamp(1.6rem, 7vw, 2.6rem);
+  }
+
+  .sub-title {
+    font-size: clamp(1.1rem, 4.6vw, 1.6rem);
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .pad-section {
+    padding: 5rem 0;
+  }
+
+  .container,
+  .mini-container {
+    padding: 0 1.5rem;
+  }
+
+  a.btn[data-name] {
+    width: 100%;
+    max-width: 20rem;
+    height: 3.6rem;
+  }
+
+  // secoes de conteudo nao precisam de tela cheia no celular
+  .about,
+  .intro,
+  .lines,
+  .featured,
+  .challange,
+  .reviews,
+  .contact,
+  .oth,
+  footer.footer,
+  .story,
+  .catalog,
+  .seals,
+  .timeline,
+  .partners,
+  .communities,
+  .benefits,
+  .cta {
+    min-height: auto;
+  }
+
+  // ---------- nav ----------
+  .nav {
+    padding: 1rem 0;
+    background-color: rgba($soft, 0.96);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 1px 0 rgba($dark, 0.08);
+
+    // sobre a foto do topo continua sem barra
+    &.light {
+      background-color: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: none;
+    }
+  }
+
+  .nav__container {
+    max-width: 92%;
+  }
+
+  .logo-btn img {
+    width: 6.5rem;
+  }
+
+  .nav .shop-btn {
+    width: auto;
+
+    .hover-btn {
+      display: none;
+    }
+
+    div.img-box {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  .hamb__btn {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0.6rem 0.4rem;
+  }
+
+  // ---------- menu ----------
+  .hamb__menu {
+    width: 100%;
+    padding: 12vh 8vw 8vh;
+    overflow-y: auto;
+    justify-content: flex-start;
+
+    a.close-btn {
+      top: 1.8rem;
+      right: 1.8rem;
+      font-size: 0.9rem;
+    }
+
+    .hamb-links a {
+      margin-left: 0;
+      font-size: clamp(26px, 9vw, 42px);
+      padding: 0.4rem 0;
+    }
+
+    .hamb-links-two {
+      margin-top: 2.5rem;
+
+      a {
+        margin-left: 0;
+      }
+    }
+
+    p.dev-p {
+      position: relative;
+      bottom: auto;
+      right: auto;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+    }
+  }
+
+  // ---------- banner ----------
+  .banner .banner-tag {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+
+  // ---------- about ----------
+  .about {
+    .container .text-box {
+      line-height: 1.4;
+
+      h6 {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        line-height: 1.8;
+
+        span {
+          padding: 0.6rem;
+        }
+      }
+
+      h1 {
+        line-height: 1.3;
+
+        &.flex {
+          flex-wrap: wrap;
+        }
+
+        div {
+          width: 5.5rem;
+          height: 3.2rem;
+          margin: 0 0.4rem;
+        }
+      }
+    }
+  }
+
+  // ---------- intro ----------
+  .intro {
+    max-height: none;
+    min-height: auto;
+
+    .mini-container {
+      height: auto;
+      flex-direction: column;
+      padding: 5rem 1.5rem;
+
+      .intro-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+
+        .parallax-box {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          margin-bottom: 2rem;
+          order: -1;
+          transform: none !important;
+
+          h1 {
+            font-size: clamp(2rem, 9vw, 3.2rem);
+          }
+        }
+
+        .text-box.row {
+          gap: 1rem;
+
+          p {
+            font-size: 0.85rem;
+          }
+
+          p:last-of-type {
+            text-align: right;
+          }
+        }
+      }
+
+      .intro-pic {
+        position: relative;
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 22rem;
+        margin-top: 2.5rem;
+
+        .img-box {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          top: 0;
+
+          img {
+            transform: none;
+            object-fit: cover;
+          }
+        }
+
+        .bg-container {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // ---------- galeria ----------
+  .gallery .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+  }
+
+  .gallery .gallery__item .img-box {
+    height: 17rem;
+  }
+
+  // quebras de linha escritas para desktop atrapalham no celular
+  .challange .container h1 br,
+  .page-hero h1 br {
+    display: none;
+  }
+
+  // ---------- linhas e destaques ----------
+  .lines,
+  .featured {
+    .lines-title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .lines-grid {
+    gap: 3rem;
+  }
+
+  .line-card {
+    .img-box {
+      height: 20rem;
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      margin: 0.8rem 0 1.5rem;
+    }
+
+    a.btn {
+      width: 100%;
+    }
+  }
+
+  // ---------- citacao ----------
+  .challange {
+    min-height: auto;
+    padding: 6rem 0;
+
+    .container h1 {
+      line-height: 1.4;
+    }
+
+    .quote-author {
+      margin-top: 2rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  // ---------- avaliacoes ----------
+  .reviews {
+    min-height: auto;
+    padding: 5rem 0;
+  }
+
+  .review-slider {
+    padding: 0;
+    margin-top: 2rem;
+
+    .review__author {
+      margin-top: 1.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  .review-nav {
+    width: 100%;
+    max-width: 16rem;
+  }
+
+  // ---------- contato ----------
+  .contact {
+    max-height: none;
+    min-height: auto;
+    flex-direction: column;
+
+    .left-contact,
+    .right-contact {
+      flex: 0 0 100%;
+      max-width: 100%;
+      height: auto;
+      padding: 5rem 1.5rem;
+    }
+
+    .left-contact {
+      h4 {
+        width: 100%;
+        margin: 1.5rem 0 2rem;
+      }
+    }
+
+    .contact-links {
+      width: 100%;
+      gap: 1.2rem;
+
+      a.btn[data-name] {
+        width: 100%;
+        max-width: 20rem;
+        height: 3.6rem;
+      }
+    }
+
+    .right-contact .img-box {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 12rem;
+      height: 16rem;
+      margin-top: 2rem;
+
+      img {
+        transform: none;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // ---------- juramento ----------
+  .oth {
+    .mini-container {
+      h1 {
+        letter-spacing: 2px;
+      }
+
+      .oth-content {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        :after {
+          display: none;
+        }
+
+        .left-oth,
+        .right-oth {
+          flex: 0 0 100%;
+          max-width: 100%;
+
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  // ---------- footer ----------
+  footer {
+    min-height: auto;
+
+    .mini-container {
+      flex-direction: column;
+      height: auto;
+      padding: 3rem 1.5rem;
+
+      .left-foot,
+      .right-foot {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .left-foot .footer-links {
+        margin-top: 2.5rem;
+      }
+
+      .right-foot {
+        margin-top: 3rem;
+
+        .social-links {
+          justify-content: flex-start;
+        }
+
+        p {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  // ---------- paginas internas ----------
+  .page-hero {
+    min-height: 80vh;
+
+    .page-hero__content {
+      padding: 9rem 1.5rem 4rem;
+    }
+  }
+
+  .story,
+  .communities,
+  .benefits,
+  .timeline,
+  .partners,
+  .seals {
+    padding: 5rem 0;
+  }
+
+  .story .story__grid,
+  .communities .story__grid {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .story .story__pic {
+    order: -1;
+
+    .img-box {
+      height: 20rem;
+    }
+  }
+
+  .story.alt .story__pic {
+    order: -1;
+  }
+
+  .story .story__text blockquote {
+    padding-left: 1rem;
+  }
+
+  .communities .communities__grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .communities .community {
+    padding: 1.2rem;
+  }
+
+  .timeline .timeline__grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin-top: 2rem;
+    gap: 0;
+  }
+
+  .timeline .timeline__item {
+    padding: 1.5rem 0;
+  }
+
+  .partners .partners__logos {
+    gap: 2rem;
+
+    img.small {
+      max-width: 9rem;
+    }
+  }
+
+  .seals .seals__grid {
+    gap: 2rem;
+
+    img {
+      width: 5rem;
+      height: 3.6rem;
+    }
+  }
+
+  .seals .principles-box {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .benefits .benefits__grid {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .benefits .selo {
+    flex: 0 0 12rem;
+    max-width: 12rem;
+    margin: 0 auto;
+  }
+
+  .cta {
+    min-height: auto;
+    padding: 5rem 1.5rem;
+
+    p.paragraph {
+      margin: 1.2rem auto 2.5rem;
+    }
+  }
+
+  // ---------- catalogo ----------
+  .catalog {
+    padding: 3rem 0 5rem;
+  }
+
+  .catalog__filters {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 1rem 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    a {
+      flex: 0 0 auto;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  // ---------- cards de produto ----------
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+    margin: 2.5rem 0;
+    padding: 0;
+  }
+
+  .product-card {
+    .img-box {
+      height: 13rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &__tag {
+      top: 0.5rem;
+      left: 0.5rem;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.5rem;
+    }
+
+    &__name {
+      font-size: 1.1rem;
+    }
+
+    &__desc {
+      font-size: 0.8rem;
+      margin: 0.4rem 0 0.8rem;
+    }
+
+    &__foot {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    &__add {
+      width: 100%;
+      padding: 0.7rem 0.5rem;
+      text-align: center;
+    }
+  }
+
+  // ---------- carrinho ----------
+  .drawer {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+
+    &__item .img-box {
+      flex: 0 0 4rem;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &__foot a.btn {
+      max-width: 100%;
+    }
+  }
+
+  .qty__btn {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  // ---------- modal ----------
+  .modal {
+    align-items: flex-start;
+
+    &__box {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      padding: 4.5rem 1.5rem 3rem;
+    }
+
+    &__close {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    &__pic {
+      height: 16rem;
+    }
+
+    &__content {
+      padding-top: 0.5rem;
+    }
+
+    &__title {
+      font-size: clamp(1.6rem, 7vw, 2.4rem);
+    }
+
+    &__price {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    &__cols {
+      flex-direction: column;
+      gap: 0;
+
+      > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__add {
+      width: 100%;
+    }
+  }
+}
+
+// ================= CELULAR PEQUENO =================
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 22vw;
+  }
+
+  .about .container .text-box h1 div {
+    width: 4.5rem;
+    height: 2.6rem;
+  }
+
+  .products-grid {
+    gap: 1.5rem 0.8rem;
+  }
+
+  .product-card .img-box {
+    height: 10.5rem;
+  }
+
+  .product-card__name {
+    font-size: 1rem;
+  }
+
+  .gallery .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery .gallery__item .img-box {
+    height: 20rem;
+  }
+
+  .line-card .img-box {
+    height: 16rem;
+  }
+
+  .story .story__pic .img-box {
+    height: 16rem;
+  }
+
+  .seals .seals__grid img {
+    width: 3.8rem;
+  }
+
+  .hamb__menu .hamb-links a {
+    font-size: clamp(24px, 8.5vw, 34px);
+  }
+}
+
+// foto do contato no celular (a pilha de palavras foi removida)
+@media only screen and (max-width: 768px) {
+  .contact .right-contact .img-box {
+    width: 15rem;
+    max-width: 80%;
+    height: 21rem;
+    max-height: none;
+  }
+}
