@@ -286,21 +286,36 @@
   background-color: $soft;
   text-align: center;
 
+  // os logos vinham numa imagem unica mais o Finep solto ao lado, entao
+  // tamanhos e espacos saiam desencontrados. Agora cada um e um arquivo
+  // proprio, todos na mesma altura e com o mesmo respiro.
   .partners__logos {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    margin-top: 2.5rem;
     flex-wrap: wrap;
+    gap: 3rem 3.5rem;
+    margin-top: 3rem;
+    list-style: none;
+    padding: 0;
 
-    img {
-      max-width: 34rem;
-      width: 100%;
-      height: auto;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 4.6rem;
     }
 
-    img.small {
-      max-width: 12rem;
+    img {
+      height: 100%;
+      width: auto;
+      max-width: 14rem;
+      object-fit: contain;
+    }
+
+    // marca deitada: na mesma altura dos outros ela ficaria larga demais
+    img.largo {
+      height: 86%;
     }
   }
 }
@@ -547,4 +562,37 @@
 // seções alinhadas à esquerda
 .benefits > .container > .lines-title {
   text-align: left;
+}
+
+// -----------------------------------------------
+// Texto corrido justificado
+// So nas colunas de leitura. Titulo, olho de secao e texto centralizado
+// continuam alinhados, porque justificar texto centralizado desalinha tudo.
+// A hifenizacao vem junto: sem ela o justificado abre buracos entre as
+// palavras, que e justamente o que incomoda na leitura.
+// -----------------------------------------------
+.story__text p.paragraph,
+.timeline__item p,
+.line-card p,
+.benefits ul li,
+.intro-content .paragraph,
+.left-oth .paragraph,
+.right-oth .paragraph {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+// em coluna estreita o justificado abre vaos grandes demais
+@media only screen and (max-width: 480px) {
+  .story__text p.paragraph,
+  .timeline__item p,
+  .line-card p,
+  .benefits ul li,
+  .intro-content .paragraph,
+  .left-oth .paragraph,
+  .right-oth .paragraph {
+    text-align: left;
+  }
 }

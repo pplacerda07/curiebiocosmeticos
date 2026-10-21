@@ -2060,19 +2060,29 @@ footer.footer .mini-container {
   text-align: center;
 }
 .partners .partners__logos {
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  margin-top: 2.5rem;
   flex-wrap: wrap;
+  gap: 3rem 3.5rem;
+  margin-top: 3rem;
+  list-style: none;
+  padding: 0;
+}
+.partners .partners__logos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.6rem;
 }
 .partners .partners__logos img {
-  max-width: 34rem;
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
+  max-width: 14rem;
+  object-fit: contain;
 }
-.partners .partners__logos img.small {
-  max-width: 12rem;
+.partners .partners__logos img.largo {
+  height: 86%;
 }
 
 .communities {
@@ -2295,6 +2305,30 @@ footer.footer .mini-container {
   text-align: left;
 }
 
+.story__text p.paragraph,
+.timeline__item p,
+.line-card p,
+.benefits ul li,
+.intro-content .paragraph,
+.left-oth .paragraph,
+.right-oth .paragraph {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .story__text p.paragraph,
+  .timeline__item p,
+  .line-card p,
+  .benefits ul li,
+  .intro-content .paragraph,
+  .left-oth .paragraph,
+  .right-oth .paragraph {
+    text-align: left;
+  }
+}
 @media only screen and (max-width: 1060px) {
   @supports (height: 100svh) {
     .section {
